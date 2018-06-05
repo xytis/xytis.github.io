@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fixed on Ranting about fantasies</title>
-    <link>http://www.nolife4life.org/fixed/</link>
+    <link>/fixed/</link>
     <description>Recent content in Fixed on Ranting about fantasies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 26 Feb 2016 00:31:14 +0200</lastBuildDate>
     
-	<atom:link href="http://www.nolife4life.org/fixed/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/fixed/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>about</title>
-      <link>http://www.nolife4life.org/about/</link>
+      <link>/about/</link>
       <pubDate>Fri, 26 Feb 2016 00:31:14 +0200</pubDate>
       
-      <guid>http://www.nolife4life.org/about/</guid>
+      <guid>/about/</guid>
       <description></description>
     </item>
     
