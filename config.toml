@@ -9,7 +9,8 @@ publishdir = "public"
 author = "xytis"
 title = "Ranting about fantasies"
 
-pygmentsUseClasses = true
+pygmentsUseClasses = false
+pygmentsStyle = "bw"
 pygmentsCodeFences = true
 pluralizelisttitles = false
 
