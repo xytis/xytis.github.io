@@ -1,5 +1,3 @@
-baseurl = "http://www.nolife4life.org/"
-
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
