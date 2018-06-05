@@ -599,12 +599,10 @@ section.main .content .markdown code,
 section.main .content .markdown pre {
   font-family: 'Ubuntu Mono', 'Menlo', monospace;
   font-size: 0.98rem;
-  background-color: #f7f7f7;
 }
 section.main .content .markdown code {
   /* enclosed by single backtick (`) */
   padding: .15em .5em;
-  border-radius: 2px;
 }
 section.main .content .markdown pre {
   /* Hugo specific: consider using the 'highlight' shortcode */
@@ -617,6 +615,7 @@ section.main .content .markdown pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
+  border: solid 1px;
 }
 section.main .content .markdown pre code {
   /* enclosed by 4 backticks (````) */
