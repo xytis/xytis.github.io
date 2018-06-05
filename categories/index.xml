@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Ranting about fantasies</title>
-    <link>/categories/</link>
+    <link>https://www.nolife4life.org/categories/</link>
     <description>Recent content in Categories on Ranting about fantasies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.nolife4life.org/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cpp</title>
-      <link>/categories/cpp/</link>
+      <link>https://www.nolife4life.org/categories/cpp/</link>
       <pubDate>Fri, 11 Oct 2013 12:00:00 +0200</pubDate>
       
-      <guid>/categories/cpp/</guid>
+      <guid>https://www.nolife4life.org/categories/cpp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cpp11</title>
-      <link>/categories/cpp11/</link>
+      <link>https://www.nolife4life.org/categories/cpp11/</link>
       <pubDate>Fri, 11 Oct 2013 12:00:00 +0200</pubDate>
       
-      <guid>/categories/cpp11/</guid>
+      <guid>https://www.nolife4life.org/categories/cpp11/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Templates</title>
-      <link>/categories/templates/</link>
+      <link>https://www.nolife4life.org/categories/templates/</link>
       <pubDate>Fri, 11 Oct 2013 12:00:00 +0200</pubDate>
       
-      <guid>/categories/templates/</guid>
+      <guid>https://www.nolife4life.org/categories/templates/</guid>
       <description></description>
     </item>
     

@@ -9,18 +9,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Don&#39;t panic">
 
-<base href="">
+<base href="https://www.nolife4life.org/">
 <title>
 
 
      Tackling Functions 
 
 </title>
-<link rel="canonical" href="/blog/tackling-functions/">
+<link rel="canonical" href="https://www.nolife4life.org/blog/tackling-functions/">
 
 
 <script type="text/javascript">
-    var baseURL = '';
+    var baseURL = 'https:\/\/www.nolife4life.org\/';
     var host = baseURL.substring(0, baseURL.length - 1).replace(/\//g, '');
     if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
         window.location.protocol = 'https:';
@@ -28,17 +28,10 @@
 </script>
 
 
-<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
-<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
-
-
-
-
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/pygments.css">
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://www.nolife4life.org/css/reset.css">
+<link rel="stylesheet" href="https://www.nolife4life.org/css/syntax.css">
+<link rel="stylesheet" href="https://www.nolife4life.org/css/main.css">
 
 
 
@@ -47,7 +40,7 @@
 
 <link rel="shortcut icon"
 
-    href="/img/favicon.ico"
+    href="https://www.nolife4life.org/img/favicon.ico"
 
 >
 
@@ -61,11 +54,11 @@
 <section class="header">
     <div class="container">
         <div class="content">
-            <a href="/"><div class="name">xytis</div></a>
+            <a href="https://www.nolife4life.org/"><div class="name">xytis</div></a>
             <nav>
                 <ul>
-                    <a href="/blog/"><li>Blog</li></a>
-                    <a href="/about/"><li>About</li></a>
+                    <a href="https://www.nolife4life.org/blog/"><li>Blog</li></a>
+                    <a href="https://www.nolife4life.org/about/"><li>About</li></a>
                 </ul>
             </nav>
         </div>
@@ -107,7 +100,7 @@
 
 </div>
 
-                    <div class="initials"><a href=""></a></div>
+                    <div class="initials"><a href="https://www.nolife4life.org/"></a></div>
                 </div>
                 <div class="meta">
                     <div class="date" title="Mon Aug 26 2013 21:53:00 &#43;0200">Aug 26, 2013</div>
@@ -122,39 +115,31 @@
 <h4 id="syntax">Syntax</h4>
 
 <p>The code in question provides an alternate implementation of std::function, so at least it should make such code work:</p>
-
-<pre><code class="language-cpp">int foo(int a) {};
-func::function&lt;int(int)&gt; f(foo);
-f(5);
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{};</span>
+<span class="n">func</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">(</span><span class="n">foo</span><span class="p">);</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre></div>
 <p>I started analyzing this code by searching for a definition of <code>function</code>. After skipping compiler specific workarounds and macro definitions we arrive at first meaningful statement:</p>
-
-<pre><code class="language-cpp">template&lt;typename&gt;
-class function;
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">function</span><span class="p">;</span>
+</code></pre></div>
 <p>Great, we have a forward declaration of template class <code>function</code> which takes one parameter. For the time being lets skip the <code>namespace detail</code> and arrive at a partial instantiation of this template:</p>
-
-<pre><code class="language-cpp">template&lt;typename Result, typename... Arguments&gt;
-class function&lt;Result (Arguments...)&gt;
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">Result</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Arguments</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">function</span><span class="o">&lt;</span><span class="n">Result</span> <span class="p">(</span><span class="n">Arguments</span><span class="p">...)</span><span class="o">&gt;</span>
+</code></pre></div>
 <p>Now this is something I did not know before: You may define a partial template instantiation, by using a template. Here <code>function&lt;template T&gt;</code> type <code>T</code> is specialized as <code>Result (Arguments...)</code>, where <code>Result</code> and <code>Arguments...</code> are both template types. Why? Well You get this nice syntax support (<code>function&lt;void(int)&gt;</code>) where compiler fills the <code>Result</code> and <code>Arguments...</code> with appropriate types.</p>
 
 <p>Since we skipped the <code>detail</code>, lets ignore the parent class too, we will come back to it later.
 Next thing I jumped to is the initialization:</p>
-
-<pre><code class="language-cpp">function();                             //[1]
-function(std::nullptr_t);               //[2]
-function(function &amp;&amp; other);            //[3]
-function(const function &amp; other);       //[4]
-
-template&lt;typename T&gt;
-function(T functor,
-  typename std::enable_if&lt;detail::is_valid_function_argument&lt;T, Result (Arguments...)&gt;::value, detail::empty_struct&gt;::type = detail::empty_struct());   //[5]
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">function</span><span class="p">();</span>                             <span class="c1">//[1]
+</span><span class="c1"></span><span class="n">function</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">nullptr_t</span><span class="p">);</span>               <span class="c1">//[2]
+</span><span class="c1"></span><span class="n">function</span><span class="p">(</span><span class="n">function</span> <span class="o">&amp;&amp;</span> <span class="n">other</span><span class="p">);</span>            <span class="c1">//[3]
+</span><span class="c1"></span><span class="n">function</span><span class="p">(</span><span class="k">const</span> <span class="n">function</span> <span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>       <span class="c1">//[4]
+</span><span class="c1"></span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">function</span><span class="p">(</span><span class="n">T</span> <span class="n">functor</span><span class="p">,</span>
+  <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">detail</span><span class="o">::</span><span class="n">is_valid_function_argument</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Result</span> <span class="p">(</span><span class="n">Arguments</span><span class="p">...)</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="n">detail</span><span class="o">::</span><span class="n">empty_struct</span><span class="o">&gt;::</span><span class="n">type</span> <span class="o">=</span> <span class="n">detail</span><span class="o">::</span><span class="n">empty_struct</span><span class="p">());</span>   <span class="c1">//[5]
+</span><span class="c1"></span></code></pre></div>
 <p>Later constructors are the same as these, only they take user defined allocator as a parameter.
 First constructor is obvious, it creates an empty function. Second overload is a new feature of cpp11, this constructor is called if user passes nullptr as the argument. Note: standard define <code>NULL 0</code> will not trigger it. Third constructor is also a new feature &ndash; move constructor, which works as copy constructor, but avoids allocating any resources by &lsquo;stealing&rsquo; them from given argument (which always should be a temporary rvalue). Fourth &ndash; simple copy constructor.</p>
 
@@ -162,124 +147,109 @@ First constructor is obvious, it creates an empty function. Second overload is a
 
 <p>Lets look at requirements imposed on template constructor: <code>detail::is_valid_function_argument&lt;T, Result (Arguments...)&gt;::value</code>. As the name implies &ndash; this code should check if <code>T</code> is a function-like type, which can take <code>Arguments...</code> and return <code>Result</code>. This check is quite complicated since type <code>T</code> may be a <code>struct</code> or a member function, so that compiler is unable to match it to <code>Result (Arguments...)</code> pattern implicitly.
 Check is declared in <code>namespace detail</code> as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">,</span> <span class="k">typename</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">is_valid_function_argument</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">};</span>
 
-<pre><code class="language-cpp">template&lt;typename, typename&gt;
-struct is_valid_function_argument
-{
-  static const bool value = false;
-};
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">Result</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Arguments</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">is_valid_function_argument</span><span class="o">&lt;</span><span class="n">function</span><span class="o">&lt;</span><span class="n">Result</span> <span class="p">(</span><span class="n">Arguments</span><span class="p">...)</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">Result</span> <span class="p">(</span><span class="n">Arguments</span><span class="p">...)</span><span class="o">&gt;</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="p">};</span>
 
-template&lt;typename Result, typename... Arguments&gt;
-struct is_valid_function_argument&lt;function&lt;Result (Arguments...)&gt;, Result (Arguments...)&gt;
-{
-  static const bool value = false;
-};
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Result</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Arguments</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">is_valid_function_argument</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Result</span> <span class="p">(</span><span class="n">Arguments</span><span class="p">...)</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="cp">#ifdef _MSC_VER
+</span><span class="cp"></span>  <span class="c1">// as of january 2013 visual studio doesn&#39;t support the SFINAE below
+</span><span class="c1"></span>  <span class="k">static</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+<span class="cp">#else
+</span><span class="cp"></span>  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">U</span><span class="o">&gt;</span>
+  <span class="k">static</span> <span class="k">decltype</span><span class="p">(</span><span class="n">to_functor</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span><span class="p">())(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">Arguments</span><span class="o">&gt;</span><span class="p">()...))</span> <span class="n">check</span><span class="p">(</span><span class="n">U</span> <span class="o">*</span><span class="p">);</span>
+  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="o">&gt;</span>
+  <span class="k">static</span> <span class="n">empty_struct</span> <span class="n">check</span><span class="p">(...);</span>
 
-template&lt;typename T, typename Result, typename... Arguments&gt;
-struct is_valid_function_argument&lt;T, Result (Arguments...)&gt;
-{
-#ifdef _MSC_VER
-  // as of january 2013 visual studio doesn't support the SFINAE below
-  static const bool value = true;
-#else
-  template&lt;typename U&gt;
-  static decltype(to_functor(std::declval&lt;U&gt;())(std::declval&lt;Arguments&gt;()...)) check(U *);
-  template&lt;typename&gt;
-  static empty_struct check(...);
-
-  static const bool value = std::is_convertible&lt;decltype(check&lt;T&gt;(nullptr)), Result&gt;::value;
-#endif
-};
-</code></pre>
-
+  <span class="k">static</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">value</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">is_convertible</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">check</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)),</span> <span class="n">Result</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">;</span>
+<span class="cp">#endif
+</span><span class="cp"></span><span class="p">};</span>
+</code></pre></div>
 <p>Compiler (as far as I know) always matches the strictest definition first, so the first definition works as a trap for everything that is not a valid function argument. Second specialization is aimed at ruling out template instantiation for function object. I am not sure why this template should ever be picked, since copy constructor should pick out functions that have the same type signature.</p>
 
 <p>Now the final specialization (again, note the templates in specialization) actually does some checking:</p>
-
-<pre><code class="language-cpp">static const bool value = std::is_convertible&lt;decltype(check&lt;T&gt;(nullptr)), Result&gt;::value;
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">static</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">value</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">is_convertible</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">check</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)),</span> <span class="n">Result</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">;</span>
+</code></pre></div>
 <p>First, a quick detour to wikipedia for meaning of <a href="http://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error">SFINAE</a>: If compiler encounters a substitution error while resolving a template instantiation, it does not stop with an error and continues to search for a valid candidate. In this case it means that in case of error in first instantiation of <code>check</code> function, compiler will choose second overload. Also note the <code>...</code> in the second template definition. As wiki says:
     An ellipsis is used not only because it will accept any argument, but also because its conversion rank is lowest, so a call to the first function will be preferred if it is possible; this removes ambiguity.
 So it simply reassures that compiler will apply any tricks, implicit conversions, or things I have no idea about in order to match the first definition.
 The checking is done in two parts &ndash; one that checks if given object is a functor of some sorts, and another, which checks if return type is valid and can be treated as <code>Result</code>.
 Lets start with the latter (even if the compiler goes the other way around). Call to <code>decltype(check&lt;T&gt;(nullptr))</code> evaluates the type of the expression without actually evaluating the expression. So when the function <code>check&lt;T&gt;(nullptr)</code> is matched with first definition &ndash; this evaluates to whatever the type <code>T</code> may return on when evaluating code <code>t(arguments...)</code>, where <code>t</code> is an instance of <code>T</code> and <code>arguments</code> is the list of instances of types <code>Arguments</code>. The constrain for return value is set as <code>std::is_convertible&lt;&gt;</code> which can be really useful when dealing with polymorphic overloads (class members, which return different polymorphic objects) like such:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+  <span class="k">virtual</span> <span class="n">A</span> <span class="o">*</span> <span class="n">me</span><span class="p">();</span>
+<span class="p">}</span>
 
-<pre><code class="language-cpp">class A {
-  virtual A * me();
-}
-
-class B : public A {
-  virtual B * me();
-}
-</code></pre>
-
+<span class="k">class</span> <span class="nc">B</span> <span class="o">:</span> <span class="k">public</span> <span class="n">A</span> <span class="p">{</span>
+  <span class="k">virtual</span> <span class="n">B</span> <span class="o">*</span> <span class="n">me</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Obviously if the second definition of <code>check</code> is chosen &ndash; <code>decltype(check&lt;T&gt;(nullptr)</code> will be resolved as <code>func::detail::empty_struct</code> which is pretty much not convertible to anything else than itself and it is meaningless to have a function which returns this specific struct, unless You explicitly want to break something.</p>
 
 <p>One thing remains &ndash; why the first definition uses <code>to_functor(std::declval&lt;U&gt;())(std::declval&lt;Arguments&gt;()...)</code> instead of plain <code>std::declval&lt;U&gt;()(std::declval&lt;Arguments&gt;()...)</code>?
 Unfortunately I have no idea. Here is the definition of <code>to_functor</code>, perhaps later I or someone else will explain this.</p>
-
-<pre><code class="language-cpp">template&lt;typename T&gt;
-T to_functor(T &amp;&amp; func)
-{
-  return FUNC_FORWARD(T, func);
-}
-template&lt;typename Result, typename Class, typename... Arguments&gt;
-auto to_functor(Result (Class::*func)(Arguments...)) -&gt; decltype(std::mem_fn(func))
-{
-  return std::mem_fn(func);
-}
-template&lt;typename Result, typename Class, typename... Arguments&gt;
-auto to_functor(Result (Class::*func)(Arguments...) const) -&gt; decltype(std::mem_fn(func))
-{
-  return std::mem_fn(func);
-}
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">to_functor</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;&amp;</span> <span class="n">func</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">FUNC_FORWARD</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">func</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">Result</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Class</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Arguments</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">to_functor</span><span class="p">(</span><span class="n">Result</span> <span class="p">(</span><span class="n">Class</span><span class="o">::*</span><span class="n">func</span><span class="p">)(</span><span class="n">Arguments</span><span class="p">...))</span> <span class="o">-&gt;</span> <span class="k">decltype</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">mem_fn</span><span class="p">(</span><span class="n">func</span><span class="p">))</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">mem_fn</span><span class="p">(</span><span class="n">func</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">Result</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Class</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Arguments</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">to_functor</span><span class="p">(</span><span class="n">Result</span> <span class="p">(</span><span class="n">Class</span><span class="o">::*</span><span class="n">func</span><span class="p">)(</span><span class="n">Arguments</span><span class="p">...)</span> <span class="k">const</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">decltype</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">mem_fn</span><span class="p">(</span><span class="n">func</span><span class="p">))</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">mem_fn</span><span class="p">(</span><span class="n">func</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Now if we try such code:</p>
-
-<pre><code class="language-cpp">int goo() {}
-func::function&lt;void(void)&gt; g(goo);
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">int</span> <span class="nf">goo</span><span class="p">()</span> <span class="p">{}</span>
+<span class="n">func</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">g</span><span class="p">(</span><span class="n">goo</span><span class="p">);</span>
+</code></pre></div>
 <p>It fails with abundance of errors, one of which actually is induced by our explored snippet:</p>
-
-<pre><code class="language-bash">function.h:420:5: error: no type named ‘type’ in ‘struct std::enable_if&lt;false, func::detail::empty_struct&gt;’
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span>.h:420:5: error: no <span class="nb">type</span> named ‘type’ in ‘struct std::enable_if&lt;false, func::detail::empty_struct&gt;’</code></pre></div>
 <p>So far so good, basically all the code I have analyzed up to this point is used to enforce type safety of this final constructor, but we haven&rsquo;t even touched the real code behind this implementation.</p>
 
 <h4 id="storage">Storage</h4>
 
 <p>Body of the constructor brings us to another topic: How function object is saved within func::function?</p>
-
-<pre><code class="language-cpp">  detail::manager_storage_type manager_storage;
-  Result (*call)(const detail::functor_padding &amp;, Arguments...);
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">  <span class="n">detail</span><span class="o">::</span><span class="n">manager_storage_type</span> <span class="n">manager_storage</span><span class="p">;</span>
+  <span class="n">Result</span> <span class="p">(</span><span class="o">*</span><span class="n">call</span><span class="p">)(</span><span class="k">const</span> <span class="n">detail</span><span class="o">::</span><span class="n">functor_padding</span> <span class="o">&amp;</span><span class="p">,</span> <span class="n">Arguments</span><span class="p">...);</span>
   
-  template&lt;typename T, typename Allocator&gt;
-  void initialize(T functor, Allocator &amp;&amp; allocator)
-  {
-    call = &amp;detail::function_manager_inplace_specialization&lt;T, Allocator&gt;::template call&lt;Result, Arguments...&gt;;
-    detail::create_manager&lt;T, Allocator&gt;(manager_storage, FUNC_FORWARD(Allocator, allocator));
-    detail::function_manager_inplace_specialization&lt;T, Allocator&gt;::store_functor(manager_storage, FUNC_FORWARD(T, functor));
-  }
+  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Allocator</span><span class="o">&gt;</span>
+  <span class="kt">void</span> <span class="n">initialize</span><span class="p">(</span><span class="n">T</span> <span class="n">functor</span><span class="p">,</span> <span class="n">Allocator</span> <span class="o">&amp;&amp;</span> <span class="n">allocator</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">call</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">detail</span><span class="o">::</span><span class="n">function_manager_inplace_specialization</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Allocator</span><span class="o">&gt;::</span><span class="k">template</span> <span class="n">call</span><span class="o">&lt;</span><span class="n">Result</span><span class="p">,</span> <span class="n">Arguments</span><span class="p">...</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">detail</span><span class="o">::</span><span class="n">create_manager</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Allocator</span><span class="o">&gt;</span><span class="p">(</span><span class="n">manager_storage</span><span class="p">,</span> <span class="n">FUNC_FORWARD</span><span class="p">(</span><span class="n">Allocator</span><span class="p">,</span> <span class="n">allocator</span><span class="p">));</span>
+    <span class="n">detail</span><span class="o">::</span><span class="n">function_manager_inplace_specialization</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Allocator</span><span class="o">&gt;::</span><span class="n">store_functor</span><span class="p">(</span><span class="n">manager_storage</span><span class="p">,</span> <span class="n">FUNC_FORWARD</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">functor</span><span class="p">));</span>
+  <span class="p">}</span>
   
-  typedef Result(*Empty_Function_Type)(Arguments...);
-  void initialize_empty() FUNC_NOEXCEPT
-  {
-    typedef std::allocator&lt;Empty_Function_Type&gt; Allocator;
-    static_assert(detail::is_inplace_allocated&lt;Empty_Function_Type, Allocator&gt;::value, &quot;The empty function should benefit from small functor optimization&quot;);
+  <span class="k">typedef</span> <span class="n">Result</span><span class="p">(</span><span class="o">*</span><span class="n">Empty_Function_Type</span><span class="p">)(</span><span class="n">Arguments</span><span class="p">...);</span>
+  <span class="kt">void</span> <span class="nf">initialize_empty</span><span class="p">()</span> <span class="n">FUNC_NOEXCEPT</span>
+  <span class="p">{</span>
+    <span class="k">typedef</span> <span class="n">std</span><span class="o">::</span><span class="n">allocator</span><span class="o">&lt;</span><span class="n">Empty_Function_Type</span><span class="o">&gt;</span> <span class="n">Allocator</span><span class="p">;</span>
+    <span class="k">static_assert</span><span class="p">(</span><span class="n">detail</span><span class="o">::</span><span class="n">is_inplace_allocated</span><span class="o">&lt;</span><span class="n">Empty_Function_Type</span><span class="p">,</span> <span class="n">Allocator</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&#34;The empty function should benefit from small functor optimization&#34;</span><span class="p">);</span>
     
-    detail::create_manager&lt;Empty_Function_Type, Allocator&gt;(manager_storage, Allocator());
-    detail::function_manager_inplace_specialization&lt;Empty_Function_Type, Allocator&gt;::store_functor(manager_storage, nullptr);
-    #               ifdef FUNC_NO_EXCEPTIONS
-    call = nullptr;
-    #               else
-    call = &amp;detail::empty_call&lt;Result, Arguments...&gt;;
-    #               endif
-  }
-</code></pre>
-
+    <span class="n">detail</span><span class="o">::</span><span class="n">create_manager</span><span class="o">&lt;</span><span class="n">Empty_Function_Type</span><span class="p">,</span> <span class="n">Allocator</span><span class="o">&gt;</span><span class="p">(</span><span class="n">manager_storage</span><span class="p">,</span> <span class="n">Allocator</span><span class="p">());</span>
+    <span class="n">detail</span><span class="o">::</span><span class="n">function_manager_inplace_specialization</span><span class="o">&lt;</span><span class="n">Empty_Function_Type</span><span class="p">,</span> <span class="n">Allocator</span><span class="o">&gt;::</span><span class="n">store_functor</span><span class="p">(</span><span class="n">manager_storage</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
+    <span class="cp">#               ifdef FUNC_NO_EXCEPTIONS
+</span><span class="cp"></span>    <span class="n">call</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+    <span class="cp">#               else
+</span><span class="cp"></span>    <span class="n">call</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">detail</span><span class="o">::</span><span class="n">empty_call</span><span class="o">&lt;</span><span class="n">Result</span><span class="p">,</span> <span class="n">Arguments</span><span class="p">...</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="cp">#               endif
+</span><span class="cp"></span>  <span class="p">}</span>
+</code></pre></div>
 <p>This class has only two private members: <code>manager_storage</code> &ndash; some sort of object, which is defined in <code>detail</code> namespace and <code>call</code> &ndash; function pointer which takes additional parameter <code>function_padding</code>.</p>
 
 <p>If we look at both initializations we clearly see that <code>call</code> always points to a separate template instantiation of a function, dependent on <code>T</code> &ndash; the parameter obtained on initialization and <code>Result</code> and <code>Arguments...</code> &ndash; signature of this function. Unless it points to dummy function <code>empty_call</code>, which is self explanatory. The actual code executed by <code>call</code> is a static member function, which casts given argument of <code>functor_padding</code> to type <code>T &amp;</code>, tries to use <code>()</code> operator on it with forwarded arguments and returns <code>Result</code> type object. This little trick with specific template instantiation binds the types during compile time at a cost of code bloat.</p>
@@ -289,7 +259,7 @@ func::function&lt;void(void)&gt; g(goo);
 <p>*** To be continued&hellip; ***</p>
 
                 <br>
-                <p><a href="/blog/">Back to posts</a></p>
+                <p><a href="https://www.nolife4life.org/blog/">Back to posts</a></p>
             </div>
             <br>
             <div class="disqus">

@@ -9,18 +9,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Don&#39;t panic">
 
-<base href="">
+<base href="https://www.nolife4life.org/">
 <title>
 
 
      Fun with flags 
 
 </title>
-<link rel="canonical" href="/blog/fun-with-flags/">
+<link rel="canonical" href="https://www.nolife4life.org/blog/fun-with-flags/">
 
 
 <script type="text/javascript">
-    var baseURL = '';
+    var baseURL = 'https:\/\/www.nolife4life.org\/';
     var host = baseURL.substring(0, baseURL.length - 1).replace(/\//g, '');
     if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
         window.location.protocol = 'https:';
@@ -28,17 +28,10 @@
 </script>
 
 
-<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
-<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
-
-
-
-
-<link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" href="/css/pygments.css">
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://www.nolife4life.org/css/reset.css">
+<link rel="stylesheet" href="https://www.nolife4life.org/css/syntax.css">
+<link rel="stylesheet" href="https://www.nolife4life.org/css/main.css">
 
 
 
@@ -47,7 +40,7 @@
 
 <link rel="shortcut icon"
 
-    href="/img/favicon.ico"
+    href="https://www.nolife4life.org/img/favicon.ico"
 
 >
 
@@ -61,11 +54,11 @@
 <section class="header">
     <div class="container">
         <div class="content">
-            <a href="/"><div class="name">xytis</div></a>
+            <a href="https://www.nolife4life.org/"><div class="name">xytis</div></a>
             <nav>
                 <ul>
-                    <a href="/blog/"><li>Blog</li></a>
-                    <a href="/about/"><li>About</li></a>
+                    <a href="https://www.nolife4life.org/blog/"><li>Blog</li></a>
+                    <a href="https://www.nolife4life.org/about/"><li>About</li></a>
                 </ul>
             </nav>
         </div>
@@ -107,7 +100,7 @@
 
 </div>
 
-                    <div class="initials"><a href=""></a></div>
+                    <div class="initials"><a href="https://www.nolife4life.org/"></a></div>
                 </div>
                 <div class="meta">
                     <div class="date" title="Fri Oct 11 2013 12:00:00 &#43;0200">Oct 11, 2013</div>
@@ -116,19 +109,17 @@
             </div>
             <div class="markdown">
                 <p>Every now and then I catch myself in such situation:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">enum</span> <span class="n">Alignment</span> <span class="p">{</span>
+  <span class="n">Left</span><span class="p">,</span> <span class="n">Center</span><span class="p">,</span> <span class="n">Right</span><span class="p">,</span> <span class="n">Justify</span><span class="p">,</span>
+<span class="p">};</span>
 
-<pre><code class="language-cpp">enum Alignment {
-  Left, Center, Right, Justify,
-};
+<span class="k">enum</span> <span class="n">Anchor</span> <span class="p">{</span>
+  <span class="n">Top</span><span class="p">,</span> <span class="n">Right</span><span class="p">,</span> <span class="n">Bottom</span><span class="p">,</span> <span class="n">Left</span><span class="p">,</span>
+<span class="p">};</span>
 
-enum Anchor {
-  Top, Right, Bottom, Left,
-};
-
-void SetAnchor(byte anchor);
-void SetAlignment(byte alignment);
-</code></pre>
-
+<span class="kt">void</span> <span class="nf">SetAnchor</span><span class="p">(</span><span class="n">byte</span> <span class="n">anchor</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">SetAlignment</span><span class="p">(</span><span class="n">byte</span> <span class="n">alignment</span><span class="p">);</span>
+</code></pre></div>
 <p>This just begs for errors. So what can we do here? Obvious answer &ndash; lets make a class, with overloaded <code>operator|</code> and <em>voilia</em>, we just created a type safe flag implementation.
 This time I wanted to do something different, in a way, that performance of these flags would match (in some extent) natural binary operations.</p>
 
@@ -154,77 +145,69 @@ SetAnchor(Anchor::Top | Anchor::Right); {% endcodeblock %}</p></li>
   Code for this post is stored at <a href="https://github.com/xytis/mad-flag">GitHub</a></p>
 
 <p>Since I want compile time evaluation, I must somehow store the expressions <code>a | b | c</code> as types. Naturally this can be achieved using lists: <code>a | (b | c)</code>, where <code>b | c</code> creates a compound type.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">pos</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">state</span> <span class="o">=</span> <span class="nb">true</span><span class="o">&gt;</span>
+  <span class="k">struct</span> <span class="n">flag</span> <span class="p">{</span>
+    <span class="k">constexpr</span> <span class="n">flag</span><span class="p">()</span> <span class="p">{}</span>
+  <span class="p">};</span>
 
-<pre><code class="language-cpp">  template&lt;typename T, size_t pos, bool state = true&gt;
-  struct flag {
-    constexpr flag() {}
-  };
-
-  template&lt;typename T, typename lhs_t, typename rhs_t&gt;
-  struct flag_group {
-    lhs_t &amp; lhs;
-    rhs_t &amp; rhs;
-  };
-</code></pre>
-
+  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">lhs_t</span><span class="p">,</span> <span class="k">typename</span> <span class="n">rhs_t</span><span class="o">&gt;</span>
+  <span class="k">struct</span> <span class="n">flag_group</span> <span class="p">{</span>
+    <span class="n">lhs_t</span> <span class="o">&amp;</span> <span class="n">lhs</span><span class="p">;</span>
+    <span class="n">rhs_t</span> <span class="o">&amp;</span> <span class="n">rhs</span><span class="p">;</span>
+  <span class="p">};</span>
+</code></pre></div>
 <p>These types can be nested using these operations:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">template</span><span class="o">&lt;</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="k">constexpr</span> <span class="k">auto</span> <span class="k">operator</span> <span class="o">|</span> <span class="p">(</span><span class="n">left_flag_t</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="p">...</span><span class="o">&gt;</span> <span class="n">lhs</span><span class="p">,</span> <span class="n">right_flag_t</span><span class="o">&lt;</span><span class="n">U</span><span class="p">,</span> <span class="p">...</span><span class="o">&gt;</span> <span class="n">rhs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">flag_group</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="n">lhs</span><span class="p">),</span> <span class="k">decltype</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">static_assert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">U</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&#34;Flag type missmatch!&#34;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="p">{</span><span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">};</span>
+<span class="p">}</span>
 
-<pre><code class="language-cpp">template&lt;...&gt;
-constexpr auto operator | (left_flag_t&lt;T, ...&gt; lhs, right_flag_t&lt;U, ...&gt; rhs) -&gt; flag_group&lt;T, decltype(lhs), decltype(rhs)&gt; {
-  static_assert(std::is_same&lt;T,U&gt;::value, &quot;Flag type missmatch!&quot;);
-  return {lhs, rhs};
-}
+<span class="k">template</span><span class="o">&lt;</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="k">constexpr</span> <span class="k">auto</span> <span class="k">operator</span> <span class="o">|</span> <span class="p">(</span><span class="n">left_group_type</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="p">...</span><span class="o">&gt;</span> <span class="n">lhs</span><span class="p">,</span> <span class="n">right_flag_t</span><span class="o">&lt;</span><span class="n">U</span><span class="p">,</span> <span class="p">...</span><span class="o">&gt;</span> <span class="n">rhs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">flag_group</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="n">lhs</span><span class="p">),</span> <span class="k">decltype</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">static_assert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">U</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&#34;Flag type missmatch!&#34;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="p">{</span><span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">};</span>
+<span class="p">}</span>
 
-template&lt;...&gt;
-constexpr auto operator | (left_group_type&lt;T, ...&gt; lhs, right_flag_t&lt;U, ...&gt; rhs) -&gt; flag_group&lt;T, decltype(lhs), decltype(rhs)&gt; {
-  static_assert(std::is_same&lt;T,U&gt;::value, &quot;Flag type missmatch!&quot;);
-  return {lhs, rhs};
-}
-
-template&lt;...&gt;
-constexpr auto operator | (left_group_type&lt;T, ...&gt; lhs, right_group_type&lt;U, ...&gt; rhs) -&gt; flag_group&lt;T, decltype(lhs), decltype(rhs)&gt; {
-  static_assert(std::is_same&lt;T,U&gt;::value, &quot;Flag type missmatch!&quot;);
-  return {lhs, rhs};
-}
-</code></pre>
-
+<span class="k">template</span><span class="o">&lt;</span><span class="p">...</span><span class="o">&gt;</span>
+<span class="k">constexpr</span> <span class="k">auto</span> <span class="k">operator</span> <span class="o">|</span> <span class="p">(</span><span class="n">left_group_type</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="p">...</span><span class="o">&gt;</span> <span class="n">lhs</span><span class="p">,</span> <span class="n">right_group_type</span><span class="o">&lt;</span><span class="n">U</span><span class="p">,</span> <span class="p">...</span><span class="o">&gt;</span> <span class="n">rhs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">flag_group</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="n">lhs</span><span class="p">),</span> <span class="k">decltype</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">static_assert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">U</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&#34;Flag type missmatch!&#34;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="p">{</span><span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Resulting object from operation <code>a | b | c</code> contains all expression flags, carefully nested in a compile time defined tree. Now how do we use them in orderly fashion?</p>
-
-<pre><code class="language-cpp">namespace Anchor {
-    typedef struct{} _guard;
-    typedef Flags::field&lt;_guard, 4&gt; State;
-    constexpr Flags::flag&lt;_guard, 0&gt; Top;
-    constexpr Flags::flag&lt;_guard, 1&gt; Right;
-    constexpr Flags::flag&lt;_guard, 2&gt; Bottom;
-    constexpr Flags::flag&lt;_guard, 3&gt; Left;
-}
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">namespace</span> <span class="n">Anchor</span> <span class="p">{</span>
+    <span class="k">typedef</span> <span class="k">struct</span><span class="p">{}</span> <span class="n">_guard</span><span class="p">;</span>
+    <span class="k">typedef</span> <span class="n">Flags</span><span class="o">::</span><span class="n">field</span><span class="o">&lt;</span><span class="n">_guard</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">State</span><span class="p">;</span>
+    <span class="k">constexpr</span> <span class="n">Flags</span><span class="o">::</span><span class="n">flag</span><span class="o">&lt;</span><span class="n">_guard</span><span class="p">,</span> <span class="mi">0</span><span class="o">&gt;</span> <span class="n">Top</span><span class="p">;</span>
+    <span class="k">constexpr</span> <span class="n">Flags</span><span class="o">::</span><span class="n">flag</span><span class="o">&lt;</span><span class="n">_guard</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="n">Right</span><span class="p">;</span>
+    <span class="k">constexpr</span> <span class="n">Flags</span><span class="o">::</span><span class="n">flag</span><span class="o">&lt;</span><span class="n">_guard</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">Bottom</span><span class="p">;</span>
+    <span class="k">constexpr</span> <span class="n">Flags</span><span class="o">::</span><span class="n">flag</span><span class="o">&lt;</span><span class="n">_guard</span><span class="p">,</span> <span class="mi">3</span><span class="o">&gt;</span> <span class="n">Left</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Here the namespace serves as a syntactic container for flags and for magical guard struct. The type of the struct is unique (as long as there are only a single definition of a namespace named Anchor with an empty struct) and can be used by compiler while resolving templates to imply type safety on the flags.
 State typedef in the namespace is used to create flag containers.</p>
 
 <p>After using the same macro magic as in Molecular engine, flags can be used like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">FLAGS</span><span class="p">(</span><span class="n">PlayerState</span><span class="p">,</span> <span class="n">active</span><span class="p">,</span> <span class="n">idle</span><span class="p">,</span> <span class="n">damaged</span><span class="p">,</span> <span class="n">jumping</span><span class="p">);</span>
 
-<pre><code class="language-cpp">FLAGS(PlayerState, active, idle, damaged, jumping);
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="k">namespace</span> <span class="n">PlayerState</span><span class="p">;</span>
+    <span class="n">State</span> <span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="p">();</span>
 
-int main ()
-{
-    using namespace PlayerState;
-    State state = State();
-
-    state |= active | jumping | idle;
-    std::cout &lt;&lt; ToString(state) &lt;&lt; std::endl;
+    <span class="n">state</span> <span class="o">|=</span> <span class="n">active</span> <span class="o">|</span> <span class="n">jumping</span> <span class="o">|</span> <span class="n">idle</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ToString</span><span class="p">(</span><span class="n">state</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
         
-    auto argument = damaged | !jumping;
-    state |= argument;
-    std::cout &lt;&lt; ToString(state) &lt;&lt; std::endl;
+    <span class="k">auto</span> <span class="n">argument</span> <span class="o">=</span> <span class="n">damaged</span> <span class="o">|</span> <span class="o">!</span><span class="n">jumping</span><span class="p">;</span>
+    <span class="n">state</span> <span class="o">|=</span> <span class="n">argument</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ToString</span><span class="p">(</span><span class="n">state</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 
-    return 0;
-}
-</code></pre>
-
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
                 <br>
-                <p><a href="/blog/">Back to posts</a></p>
+                <p><a href="https://www.nolife4life.org/blog/">Back to posts</a></p>
             </div>
             <br>
             <div class="disqus">
