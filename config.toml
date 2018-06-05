@@ -1,0 +1,28 @@
+baseurl = "http://www.nolife4life.org/"
+
+builddrafts = false
+canonifyurls = true
+contentdir = "content"
+languageCode = "en-US"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "xytis"
+title = "Ranting about fantasies"
+
+pygmentsuseclasses = false
+pluralizelisttitles = false
+
+[permalinks]
+fixed = ":title/"
+blog = "blog/:slug/"
+
+[params]
+Author = "xytis"
+CacheBuster = true
+DateForm = "Jan 2, 2006"
+DateFormFull = "Mon Jan 2 2006 15:04:05 MST"
+Description = "Don't panic"
+FaviconFile = "img/favicon.ico"
+GitHub = "https://github.com/xytis"
+Lang = "en"
