@@ -1,3 +1,4 @@
+baseURL = "https://www.nolife4life.org/"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
@@ -8,7 +9,8 @@ publishdir = "public"
 author = "xytis"
 title = "Ranting about fantasies"
 
-pygmentsuseclasses = false
+pygmentsUseClasses = true
+pygmentsCodeFences = true
 pluralizelisttitles = false
 
 [permalinks]
