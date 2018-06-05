@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Templates on Ranting about fantasies</title>
+    <link>http://www.nolife4life.org/categories/templates/</link>
+    <description>Recent content in Templates on Ranting about fantasies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 11 Oct 2013 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://www.nolife4life.org/categories/templates/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fun with flags</title>
+      <link>http://www.nolife4life.org/blog/fun-with-flags/</link>
+      <pubDate>Fri, 11 Oct 2013 12:00:00 +0200</pubDate>
+      
+      <guid>http://www.nolife4life.org/blog/fun-with-flags/</guid>
+      <description>Every now and then I catch myself in such situation:
+enum Alignment { Left, Center, Right, Justify, }; enum Anchor { Top, Right, Bottom, Left, }; void SetAnchor(byte anchor); void SetAlignment(byte alignment);  This just begs for errors. So what can we do here? Obvious answer &amp;ndash; lets make a class, with overloaded operator| and voilia, we just created a type safe flag implementation. This time I wanted to do something different, in a way, that performance of these flags would match (in some extent) natural binary operations.</description>
+    </item>
+    
+    <item>
+      <title>Tackling Functions</title>
+      <link>http://www.nolife4life.org/blog/tackling-functions/</link>
+      <pubDate>Mon, 26 Aug 2013 21:53:00 +0200</pubDate>
+      
+      <guid>http://www.nolife4life.org/blog/tackling-functions/</guid>
+      <description>Recently I&amp;rsquo;ve found this post, which describes a better implementation of std::functions. Since I had severe problems with understanding how this code works, I decided to write down my adventures in it step by step.
+Syntax The code in question provides an alternate implementation of std::function, so at least it should make such code work:
+int foo(int a) {}; func::function&amp;lt;int(int)&amp;gt; f(foo); f(5);  I started analyzing this code by searching for a definition of function.</description>
+    </item>
+    
+  </channel>
+</rss>

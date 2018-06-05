@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://www.nolife4life.org/about/</loc>
+    <lastmod>2016-02-26T00:31:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/blog/fun-with-flags/</loc>
+    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/blog/tackling-functions/</loc>
+    <lastmod>2013-08-26T21:53:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/blog/</loc>
+    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/categories/cpp/</loc>
+    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/categories/cpp11/</loc>
+    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/fixed/</loc>
+    <lastmod>2016-02-26T00:31:14+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/</loc>
+    <lastmod>2016-02-26T00:31:14+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nolife4life.org/categories/templates/</loc>
+    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

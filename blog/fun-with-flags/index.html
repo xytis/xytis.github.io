@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Don&#39;t panic">
+
+<base href="http://www.nolife4life.org/">
+<title>
+
+
+     Fun with flags 
+
+</title>
+<link rel="canonical" href="http://www.nolife4life.org/blog/fun-with-flags/">
+
+
+<script type="text/javascript">
+    var baseURL = 'http:\/\/www.nolife4life.org\/';
+    var host = baseURL.substring(0, baseURL.length - 1).replace(/\//g, '');
+    if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
+        window.location.protocol = 'https:';
+    }
+</script>
+
+
+<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+<link rel="stylesheet" href="http://www.nolife4life.org/css/reset.css">
+<link rel="stylesheet" href="http://www.nolife4life.org/css/pygments.css">
+<link rel="stylesheet" href="http://www.nolife4life.org/css/main.css">
+
+
+
+
+
+
+<link rel="shortcut icon"
+
+    href="http://www.nolife4life.org/img/favicon.ico"
+
+>
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="http://www.nolife4life.org/"><div class="name">xytis</div></a>
+            <nav>
+                <ul>
+                    <a href="http://www.nolife4life.org/blog/"><li>Blog</li></a>
+                    <a href="http://www.nolife4life.org/about/"><li>About</li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="https://github.com/xytis" target="_blank">
+                <i class="icon ion-social-github"></i>
+            </a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Fun with flags
+
+</div>
+
+                    <div class="initials"><a href="http://www.nolife4life.org/"></a></div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Fri Oct 11 2013 12:00:00 &#43;0200">Oct 11, 2013</div>
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                <p>Every now and then I catch myself in such situation:</p>
+
+<pre><code class="language-cpp">enum Alignment {
+  Left, Center, Right, Justify,
+};
+
+enum Anchor {
+  Top, Right, Bottom, Left,
+};
+
+void SetAnchor(byte anchor);
+void SetAlignment(byte alignment);
+</code></pre>
+
+<p>This just begs for errors. So what can we do here? Obvious answer &ndash; lets make a class, with overloaded <code>operator|</code> and <em>voilia</em>, we just created a type safe flag implementation.
+This time I wanted to do something different, in a way, that performance of these flags would match (in some extent) natural binary operations.</p>
+
+<p>So the goals for today:</p>
+
+<ul>
+<li><p>Syntax:</p>
+
+<p>{% codeblock lang:cpp %}
+auto alignment = Alignment::Justify | Alignment::Right;
+SetAnchor(Anchor::Top | Anchor::Right); {% endcodeblock %}</p></li>
+
+<li><p>Speed:</p>
+
+<p>Should be resolved during compile time most of the time and with the same speed as std::bitset when performing in runtime.</p></li>
+
+<li><p>Ease of defining:</p>
+
+<p>I liked the way <a href="http://molecularmusings.wordpress.com/2011/08/23/flags-on-steroids">Molecular</a> defined macros for their flag creation, so I shall do the same.</p></li>
+</ul>
+
+<p>Note:
+  Code for this post is stored at <a href="https://github.com/xytis/mad-flag">GitHub</a></p>
+
+<p>Since I want compile time evaluation, I must somehow store the expressions <code>a | b | c</code> as types. Naturally this can be achieved using lists: <code>a | (b | c)</code>, where <code>b | c</code> creates a compound type.</p>
+
+<pre><code class="language-cpp">  template&lt;typename T, size_t pos, bool state = true&gt;
+  struct flag {
+    constexpr flag() {}
+  };
+
+  template&lt;typename T, typename lhs_t, typename rhs_t&gt;
+  struct flag_group {
+    lhs_t &amp; lhs;
+    rhs_t &amp; rhs;
+  };
+</code></pre>
+
+<p>These types can be nested using these operations:</p>
+
+<pre><code class="language-cpp">template&lt;...&gt;
+constexpr auto operator | (left_flag_t&lt;T, ...&gt; lhs, right_flag_t&lt;U, ...&gt; rhs) -&gt; flag_group&lt;T, decltype(lhs), decltype(rhs)&gt; {
+  static_assert(std::is_same&lt;T,U&gt;::value, &quot;Flag type missmatch!&quot;);
+  return {lhs, rhs};
+}
+
+template&lt;...&gt;
+constexpr auto operator | (left_group_type&lt;T, ...&gt; lhs, right_flag_t&lt;U, ...&gt; rhs) -&gt; flag_group&lt;T, decltype(lhs), decltype(rhs)&gt; {
+  static_assert(std::is_same&lt;T,U&gt;::value, &quot;Flag type missmatch!&quot;);
+  return {lhs, rhs};
+}
+
+template&lt;...&gt;
+constexpr auto operator | (left_group_type&lt;T, ...&gt; lhs, right_group_type&lt;U, ...&gt; rhs) -&gt; flag_group&lt;T, decltype(lhs), decltype(rhs)&gt; {
+  static_assert(std::is_same&lt;T,U&gt;::value, &quot;Flag type missmatch!&quot;);
+  return {lhs, rhs};
+}
+</code></pre>
+
+<p>Resulting object from operation <code>a | b | c</code> contains all expression flags, carefully nested in a compile time defined tree. Now how do we use them in orderly fashion?</p>
+
+<pre><code class="language-cpp">namespace Anchor {
+    typedef struct{} _guard;
+    typedef Flags::field&lt;_guard, 4&gt; State;
+    constexpr Flags::flag&lt;_guard, 0&gt; Top;
+    constexpr Flags::flag&lt;_guard, 1&gt; Right;
+    constexpr Flags::flag&lt;_guard, 2&gt; Bottom;
+    constexpr Flags::flag&lt;_guard, 3&gt; Left;
+}
+</code></pre>
+
+<p>Here the namespace serves as a syntactic container for flags and for magical guard struct. The type of the struct is unique (as long as there are only a single definition of a namespace named Anchor with an empty struct) and can be used by compiler while resolving templates to imply type safety on the flags.
+State typedef in the namespace is used to create flag containers.</p>
+
+<p>After using the same macro magic as in Molecular engine, flags can be used like this:</p>
+
+<pre><code class="language-cpp">FLAGS(PlayerState, active, idle, damaged, jumping);
+
+int main ()
+{
+    using namespace PlayerState;
+    State state = State();
+
+    state |= active | jumping | idle;
+    std::cout &lt;&lt; ToString(state) &lt;&lt; std::endl;
+        
+    auto argument = damaged | !jumping;
+    state |= argument;
+    std::cout &lt;&lt; ToString(state) &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+
+                <br>
+                <p><a href="http://www.nolife4life.org/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+</body>
+</html>
+

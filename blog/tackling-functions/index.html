@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Don&#39;t panic">
+
+<base href="http://www.nolife4life.org/">
+<title>
+
+
+     Tackling Functions 
+
+</title>
+<link rel="canonical" href="http://www.nolife4life.org/blog/tackling-functions/">
+
+
+<script type="text/javascript">
+    var baseURL = 'http:\/\/www.nolife4life.org\/';
+    var host = baseURL.substring(0, baseURL.length - 1).replace(/\//g, '');
+    if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
+        window.location.protocol = 'https:';
+    }
+</script>
+
+
+<link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+<script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+<link rel="stylesheet" href="http://www.nolife4life.org/css/reset.css">
+<link rel="stylesheet" href="http://www.nolife4life.org/css/pygments.css">
+<link rel="stylesheet" href="http://www.nolife4life.org/css/main.css">
+
+
+
+
+
+
+<link rel="shortcut icon"
+
+    href="http://www.nolife4life.org/img/favicon.ico"
+
+>
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="http://www.nolife4life.org/"><div class="name">xytis</div></a>
+            <nav>
+                <ul>
+                    <a href="http://www.nolife4life.org/blog/"><li>Blog</li></a>
+                    <a href="http://www.nolife4life.org/about/"><li>About</li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="https://github.com/xytis" target="_blank">
+                <i class="icon ion-social-github"></i>
+            </a>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Tackling Functions
+
+</div>
+
+                    <div class="initials"><a href="http://www.nolife4life.org/"></a></div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Mon Aug 26 2013 21:53:00 &#43;0200">Aug 26, 2013</div>
+                    <div class="reading-time"><div class="middot"></div>7 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>Recently I&rsquo;ve found <a href="http://probablydance.com/2013/01/13/a-faster-implementation-of-stdfunction/">this post</a>, which describes a better implementation of std::functions. Since I had severe problems with understanding how this code works, I decided to write down my adventures in it step by step.</p>
+
+<h4 id="syntax">Syntax</h4>
+
+<p>The code in question provides an alternate implementation of std::function, so at least it should make such code work:</p>
+
+<pre><code class="language-cpp">int foo(int a) {};
+func::function&lt;int(int)&gt; f(foo);
+f(5);
+</code></pre>
+
+<p>I started analyzing this code by searching for a definition of <code>function</code>. After skipping compiler specific workarounds and macro definitions we arrive at first meaningful statement:</p>
+
+<pre><code class="language-cpp">template&lt;typename&gt;
+class function;
+</code></pre>
+
+<p>Great, we have a forward declaration of template class <code>function</code> which takes one parameter. For the time being lets skip the <code>namespace detail</code> and arrive at a partial instantiation of this template:</p>
+
+<pre><code class="language-cpp">template&lt;typename Result, typename... Arguments&gt;
+class function&lt;Result (Arguments...)&gt;
+</code></pre>
+
+<p>Now this is something I did not know before: You may define a partial template instantiation, by using a template. Here <code>function&lt;template T&gt;</code> type <code>T</code> is specialized as <code>Result (Arguments...)</code>, where <code>Result</code> and <code>Arguments...</code> are both template types. Why? Well You get this nice syntax support (<code>function&lt;void(int)&gt;</code>) where compiler fills the <code>Result</code> and <code>Arguments...</code> with appropriate types.</p>
+
+<p>Since we skipped the <code>detail</code>, lets ignore the parent class too, we will come back to it later.
+Next thing I jumped to is the initialization:</p>
+
+<pre><code class="language-cpp">function();                             //[1]
+function(std::nullptr_t);               //[2]
+function(function &amp;&amp; other);            //[3]
+function(const function &amp; other);       //[4]
+
+template&lt;typename T&gt;
+function(T functor,
+  typename std::enable_if&lt;detail::is_valid_function_argument&lt;T, Result (Arguments...)&gt;::value, detail::empty_struct&gt;::type = detail::empty_struct());   //[5]
+</code></pre>
+
+<p>Later constructors are the same as these, only they take user defined allocator as a parameter.
+First constructor is obvious, it creates an empty function. Second overload is a new feature of cpp11, this constructor is called if user passes nullptr as the argument. Note: standard define <code>NULL 0</code> will not trigger it. Third constructor is also a new feature &ndash; move constructor, which works as copy constructor, but avoids allocating any resources by &lsquo;stealing&rsquo; them from given argument (which always should be a temporary rvalue). Fourth &ndash; simple copy constructor.</p>
+
+<p>Now the most interesting is the fifth constructor. It is triggered by <code>func::function&lt;int(int)&gt; f(foo)</code> initialization, note that the second parameter has a default value <code>detail::empty_struct()</code> and as far as I can tell You will never explicitly specify it with any other value. But why should it have another parameter in the first place? The construct <code>typename std::enable_if&lt;...&gt;::type</code> should deny template instantiation by raising a compile time error (the specialization <code>std::enable_if&lt;false, T&gt;</code> has no field <code>type</code>) if given type <code>T</code> does not match some sort of requirements. This works partially because of function precedence, since compiler when resolving overloaded functions will prefer non-template functions to template ones, but if an implicit cast must be made to the argument, template functions are considered before doing the casts. So the template constructor is considered only if all above constructors fail to match, so in case <code>std::enable_if&lt;&gt;::type</code> does not exist, raised error means that function can not be binded (template argument mismatch or given argument can not be converted to a functor).</p>
+
+<p>Lets look at requirements imposed on template constructor: <code>detail::is_valid_function_argument&lt;T, Result (Arguments...)&gt;::value</code>. As the name implies &ndash; this code should check if <code>T</code> is a function-like type, which can take <code>Arguments...</code> and return <code>Result</code>. This check is quite complicated since type <code>T</code> may be a <code>struct</code> or a member function, so that compiler is unable to match it to <code>Result (Arguments...)</code> pattern implicitly.
+Check is declared in <code>namespace detail</code> as follows:</p>
+
+<pre><code class="language-cpp">template&lt;typename, typename&gt;
+struct is_valid_function_argument
+{
+  static const bool value = false;
+};
+
+template&lt;typename Result, typename... Arguments&gt;
+struct is_valid_function_argument&lt;function&lt;Result (Arguments...)&gt;, Result (Arguments...)&gt;
+{
+  static const bool value = false;
+};
+
+template&lt;typename T, typename Result, typename... Arguments&gt;
+struct is_valid_function_argument&lt;T, Result (Arguments...)&gt;
+{
+#ifdef _MSC_VER
+  // as of january 2013 visual studio doesn't support the SFINAE below
+  static const bool value = true;
+#else
+  template&lt;typename U&gt;
+  static decltype(to_functor(std::declval&lt;U&gt;())(std::declval&lt;Arguments&gt;()...)) check(U *);
+  template&lt;typename&gt;
+  static empty_struct check(...);
+
+  static const bool value = std::is_convertible&lt;decltype(check&lt;T&gt;(nullptr)), Result&gt;::value;
+#endif
+};
+</code></pre>
+
+<p>Compiler (as far as I know) always matches the strictest definition first, so the first definition works as a trap for everything that is not a valid function argument. Second specialization is aimed at ruling out template instantiation for function object. I am not sure why this template should ever be picked, since copy constructor should pick out functions that have the same type signature.</p>
+
+<p>Now the final specialization (again, note the templates in specialization) actually does some checking:</p>
+
+<pre><code class="language-cpp">static const bool value = std::is_convertible&lt;decltype(check&lt;T&gt;(nullptr)), Result&gt;::value;
+</code></pre>
+
+<p>First, a quick detour to wikipedia for meaning of <a href="http://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error">SFINAE</a>: If compiler encounters a substitution error while resolving a template instantiation, it does not stop with an error and continues to search for a valid candidate. In this case it means that in case of error in first instantiation of <code>check</code> function, compiler will choose second overload. Also note the <code>...</code> in the second template definition. As wiki says:
+    An ellipsis is used not only because it will accept any argument, but also because its conversion rank is lowest, so a call to the first function will be preferred if it is possible; this removes ambiguity.
+So it simply reassures that compiler will apply any tricks, implicit conversions, or things I have no idea about in order to match the first definition.
+The checking is done in two parts &ndash; one that checks if given object is a functor of some sorts, and another, which checks if return type is valid and can be treated as <code>Result</code>.
+Lets start with the latter (even if the compiler goes the other way around). Call to <code>decltype(check&lt;T&gt;(nullptr))</code> evaluates the type of the expression without actually evaluating the expression. So when the function <code>check&lt;T&gt;(nullptr)</code> is matched with first definition &ndash; this evaluates to whatever the type <code>T</code> may return on when evaluating code <code>t(arguments...)</code>, where <code>t</code> is an instance of <code>T</code> and <code>arguments</code> is the list of instances of types <code>Arguments</code>. The constrain for return value is set as <code>std::is_convertible&lt;&gt;</code> which can be really useful when dealing with polymorphic overloads (class members, which return different polymorphic objects) like such:</p>
+
+<pre><code class="language-cpp">class A {
+  virtual A * me();
+}
+
+class B : public A {
+  virtual B * me();
+}
+</code></pre>
+
+<p>Obviously if the second definition of <code>check</code> is chosen &ndash; <code>decltype(check&lt;T&gt;(nullptr)</code> will be resolved as <code>func::detail::empty_struct</code> which is pretty much not convertible to anything else than itself and it is meaningless to have a function which returns this specific struct, unless You explicitly want to break something.</p>
+
+<p>One thing remains &ndash; why the first definition uses <code>to_functor(std::declval&lt;U&gt;())(std::declval&lt;Arguments&gt;()...)</code> instead of plain <code>std::declval&lt;U&gt;()(std::declval&lt;Arguments&gt;()...)</code>?
+Unfortunately I have no idea. Here is the definition of <code>to_functor</code>, perhaps later I or someone else will explain this.</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+T to_functor(T &amp;&amp; func)
+{
+  return FUNC_FORWARD(T, func);
+}
+template&lt;typename Result, typename Class, typename... Arguments&gt;
+auto to_functor(Result (Class::*func)(Arguments...)) -&gt; decltype(std::mem_fn(func))
+{
+  return std::mem_fn(func);
+}
+template&lt;typename Result, typename Class, typename... Arguments&gt;
+auto to_functor(Result (Class::*func)(Arguments...) const) -&gt; decltype(std::mem_fn(func))
+{
+  return std::mem_fn(func);
+}
+</code></pre>
+
+<p>Now if we try such code:</p>
+
+<pre><code class="language-cpp">int goo() {}
+func::function&lt;void(void)&gt; g(goo);
+</code></pre>
+
+<p>It fails with abundance of errors, one of which actually is induced by our explored snippet:</p>
+
+<pre><code class="language-bash">function.h:420:5: error: no type named ‘type’ in ‘struct std::enable_if&lt;false, func::detail::empty_struct&gt;’
+</code></pre>
+
+<p>So far so good, basically all the code I have analyzed up to this point is used to enforce type safety of this final constructor, but we haven&rsquo;t even touched the real code behind this implementation.</p>
+
+<h4 id="storage">Storage</h4>
+
+<p>Body of the constructor brings us to another topic: How function object is saved within func::function?</p>
+
+<pre><code class="language-cpp">  detail::manager_storage_type manager_storage;
+  Result (*call)(const detail::functor_padding &amp;, Arguments...);
+  
+  template&lt;typename T, typename Allocator&gt;
+  void initialize(T functor, Allocator &amp;&amp; allocator)
+  {
+    call = &amp;detail::function_manager_inplace_specialization&lt;T, Allocator&gt;::template call&lt;Result, Arguments...&gt;;
+    detail::create_manager&lt;T, Allocator&gt;(manager_storage, FUNC_FORWARD(Allocator, allocator));
+    detail::function_manager_inplace_specialization&lt;T, Allocator&gt;::store_functor(manager_storage, FUNC_FORWARD(T, functor));
+  }
+  
+  typedef Result(*Empty_Function_Type)(Arguments...);
+  void initialize_empty() FUNC_NOEXCEPT
+  {
+    typedef std::allocator&lt;Empty_Function_Type&gt; Allocator;
+    static_assert(detail::is_inplace_allocated&lt;Empty_Function_Type, Allocator&gt;::value, &quot;The empty function should benefit from small functor optimization&quot;);
+    
+    detail::create_manager&lt;Empty_Function_Type, Allocator&gt;(manager_storage, Allocator());
+    detail::function_manager_inplace_specialization&lt;Empty_Function_Type, Allocator&gt;::store_functor(manager_storage, nullptr);
+    #               ifdef FUNC_NO_EXCEPTIONS
+    call = nullptr;
+    #               else
+    call = &amp;detail::empty_call&lt;Result, Arguments...&gt;;
+    #               endif
+  }
+</code></pre>
+
+<p>This class has only two private members: <code>manager_storage</code> &ndash; some sort of object, which is defined in <code>detail</code> namespace and <code>call</code> &ndash; function pointer which takes additional parameter <code>function_padding</code>.</p>
+
+<p>If we look at both initializations we clearly see that <code>call</code> always points to a separate template instantiation of a function, dependent on <code>T</code> &ndash; the parameter obtained on initialization and <code>Result</code> and <code>Arguments...</code> &ndash; signature of this function. Unless it points to dummy function <code>empty_call</code>, which is self explanatory. The actual code executed by <code>call</code> is a static member function, which casts given argument of <code>functor_padding</code> to type <code>T &amp;</code>, tries to use <code>()</code> operator on it with forwarded arguments and returns <code>Result</code> type object. This little trick with specific template instantiation binds the types during compile time at a cost of code bloat.</p>
+
+<p>The <code>call</code> function is triggered by <code>operator ()</code> with an argument of <code>manager_storage.functor</code>. Presumably a pointer could be stored in this field. But it gets more interesting here, because of &lsquo;small functor optimization&rsquo;.</p>
+
+<p>*** To be continued&hellip; ***</p>
+
+                <br>
+                <p><a href="http://www.nolife4life.org/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+</body>
+</html>
+
