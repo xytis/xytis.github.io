@@ -4,3 +4,5 @@ title = "about"
 
 +++
 
+I am a developer (of sorts) currently leading a DnD campaign set in Ravnica.
+

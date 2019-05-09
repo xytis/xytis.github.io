@@ -17,6 +17,7 @@ pluralizelisttitles = false
 [permalinks]
 fixed = ":title/"
 blog = "blog/:slug/"
+ravnica = "ravnica/:slug/"
 
 [params]
 Author = "xytis"

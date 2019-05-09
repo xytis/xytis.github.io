@@ -1,17 +1,15 @@
 {{ partial "header.html" . }}
 <section class="main">
-    <div class="container">
-        <div class="content">
-            <div class="page-heading">Blog</div>
-            <ul>
-            {{ range .Data.Pages.ByPublishDate }}
-                {{ if eq .Section "blog" }}
-                    {{ partial "li.html" . }}
-                {{ end }}
-            {{ end }}
-            </ul>
-        </div>
+  <div class="container">
+    <div class="content">
+      <div class="page-heading">Latest</div>
+      <ul>
+        {{ range where (.Data.Pages.ByPublishDate).Reverse "PublishDate" "gt" (now.AddDate -1 0 0) }}
+        {{ partial "li.html" . }}
+        {{ end }}
+      </ul>
     </div>
+  </div>
 </section>
 {{ partial "footer.html" . }}
 
