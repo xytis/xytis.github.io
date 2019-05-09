@@ -6,12 +6,13 @@
     <description>Recent content in Categories on Ranting about fantasies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Fri, 11 Oct 2013 12:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://www.nolife4life.org/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Cpp</title>
+      <title>cpp</title>
       <link>https://www.nolife4life.org/categories/cpp/</link>
       <pubDate>Fri, 11 Oct 2013 12:00:00 +0200</pubDate>
       
@@ -20,7 +21,7 @@
     </item>
     
     <item>
-      <title>Cpp11</title>
+      <title>cpp11</title>
       <link>https://www.nolife4life.org/categories/cpp11/</link>
       <pubDate>Fri, 11 Oct 2013 12:00:00 +0200</pubDate>
       
@@ -29,7 +30,7 @@
     </item>
     
     <item>
-      <title>Templates</title>
+      <title>templates</title>
       <link>https://www.nolife4life.org/categories/templates/</link>
       <pubDate>Fri, 11 Oct 2013 12:00:00 +0200</pubDate>
       

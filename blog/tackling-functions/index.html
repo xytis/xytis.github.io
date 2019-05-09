@@ -58,6 +58,7 @@
             <nav>
                 <ul>
                     <a href="https://www.nolife4life.org/blog/"><li>Blog</li></a>
+                    <a href="https://www.nolife4life.org/story/"><li>Stories</li></a>
                     <a href="https://www.nolife4life.org/about/"><li>About</li></a>
                 </ul>
             </nav>
@@ -121,11 +122,11 @@ f(5);
 </code></pre></div>
 <p>I started analyzing this code by searching for a definition of <code>function</code>. After skipping compiler specific workarounds and macro definitions we arrive at first meaningful statement:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">template</span>&lt;<span style="font-weight:bold">typename</span>&gt;
-<span style="font-weight:bold">class</span> <span style="font-weight:bold">function</span>;
+<span style="font-weight:bold">class</span><span style=""> </span><span style="font-weight:bold">function</span>;
 </code></pre></div>
 <p>Great, we have a forward declaration of template class <code>function</code> which takes one parameter. For the time being lets skip the <code>namespace detail</code> and arrive at a partial instantiation of this template:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">template</span>&lt;<span style="font-weight:bold">typename</span> Result, <span style="font-weight:bold">typename</span>... Arguments&gt;
-<span style="font-weight:bold">class</span> <span style="font-weight:bold">function</span>&lt;Result (Arguments...)&gt;
+<span style="font-weight:bold">class</span><span style=""> </span><span style="font-weight:bold">function</span>&lt;Result (Arguments...)&gt;
 </code></pre></div>
 <p>Now this is something I did not know before: You may define a partial template instantiation, by using a template. Here <code>function&lt;template T&gt;</code> type <code>T</code> is specialized as <code>Result (Arguments...)</code>, where <code>Result</code> and <code>Arguments...</code> are both template types. Why? Well You get this nice syntax support (<code>function&lt;void(int)&gt;</code>) where compiler fills the <code>Result</code> and <code>Arguments...</code> with appropriate types.</p>
 
@@ -139,7 +140,7 @@ Next thing I jumped to is the initialization:</p>
 <span style="font-weight:bold">template</span>&lt;<span style="font-weight:bold">typename</span> T&gt;
 function(T functor,
   <span style="font-weight:bold">typename</span> std::enable_if&lt;detail::is_valid_function_argument&lt;T, Result (Arguments...)&gt;::value, detail::empty_struct&gt;::type = detail::empty_struct());   <span style="font-style:italic">//[5]
-</span><span style="font-style:italic"></span></code></pre></div>
+</span></code></pre></div>
 <p>Later constructors are the same as these, only they take user defined allocator as a parameter.
 First constructor is obvious, it creates an empty function. Second overload is a new feature of cpp11, this constructor is called if user passes nullptr as the argument. Note: standard define <code>NULL 0</code> will not trigger it. Third constructor is also a new feature &ndash; move constructor, which works as copy constructor, but avoids allocating any resources by &lsquo;stealing&rsquo; them from given argument (which always should be a temporary rvalue). Fourth &ndash; simple copy constructor.</p>
 
@@ -185,11 +186,11 @@ Check is declared in <code>namespace detail</code> as follows:</p>
 So it simply reassures that compiler will apply any tricks, implicit conversions, or things I have no idea about in order to match the first definition.
 The checking is done in two parts &ndash; one that checks if given object is a functor of some sorts, and another, which checks if return type is valid and can be treated as <code>Result</code>.
 Lets start with the latter (even if the compiler goes the other way around). Call to <code>decltype(check&lt;T&gt;(nullptr))</code> evaluates the type of the expression without actually evaluating the expression. So when the function <code>check&lt;T&gt;(nullptr)</code> is matched with first definition &ndash; this evaluates to whatever the type <code>T</code> may return on when evaluating code <code>t(arguments...)</code>, where <code>t</code> is an instance of <code>T</code> and <code>arguments</code> is the list of instances of types <code>Arguments</code>. The constrain for return value is set as <code>std::is_convertible&lt;&gt;</code> which can be really useful when dealing with polymorphic overloads (class members, which return different polymorphic objects) like such:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">class</span> <span style="font-weight:bold">A</span> {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">class</span><span style=""> </span><span style="font-weight:bold">A</span> {
   <span style="font-weight:bold">virtual</span> A * me();
 }
 
-<span style="font-weight:bold">class</span> <span style="font-weight:bold">B</span> : <span style="font-weight:bold">public</span> A {
+<span style="font-weight:bold">class</span><span style=""> </span><span style="font-weight:bold">B</span> : <span style="font-weight:bold">public</span> A {
   <span style="font-weight:bold">virtual</span> B * me();
 }
 </code></pre></div>
