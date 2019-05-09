@@ -11,18 +11,19 @@ looking for someone. His eyes blinked quickly while filtering the faces of the
 crowd. Suddenly his gaze fixated on a loxodon at the side of the street calmly
 browsing through some merchandise.
 
--- “Here you go sir”-, the courier said under his breath and pressed a piece of
+--"Here you go sir",- the courier said under his breath and pressed a piece of
 paper into thick elephant hand.
 
--- “Mhm”-, murmured the ‘phant, while nodding and with a motion of his large
+--"Mhm",- murmured the ‘phant, while nodding and with a motion of his large
 head hinted the boy that he should leave now.
 
 As the boy turned his back and blended in the thick crowd the ‘phant broke the
 Izzet seal on the paper. His ever calm face darkened as his eyes went over the
 note:
 
-    Dear friend, Please meet me at my laboratory in The Blistercoils, between
-    Sullemand's and Sunnix's before the sun sets tonight.
+    Dear friend,
+    Please meet me at my laboratory in The Blistercoils, between Sullemand's
+    and Sunnix's before the sun sets tonight.
     I beg for your help,
     Neirius
 
@@ -30,11 +31,11 @@ The loxodon turned westward and started rowing through the crowd as another
 figure bumped into him. The elephant dropped an angry look at a small humanoid
 who snapped with frustration in a womanly voice:
 
--- “Watch where you’re going elephant man!”
+--"Watch where you’re going elephant man!"
 
--- “I am going where I need to go, move!”
+--"I am going where I need to go, move!"
 
--- “Excuse my clumsiness”, - she complied with a change in her temper and
+--"Excuse my clumsiness",- she complied with a change in her temper and
 motioned for the elephant to pass.
 
 The large beast involuntary checked his pockets to see if anything was missing,
@@ -46,36 +47,36 @@ himself while rushing through the busy streets and dark alleys between them
 when he heard a loud snap and a sneeze behind him. Turning around he saw a
 shadowy figure sulking by a corner he’d just passed.
 
--- “Who’s there?” - His low voice trumpeted in the alley.
+--"Who’s there?"- His low voice trumpeted in the alley.
 
--- “Hello again.” - The dark figure answered slowly moving in from the shadows.
+--"Hello again."- The dark figure answered slowly moving in from the shadows.
 
 A soft smile was visible under a deep blue hood. It was the same human he’d
 just bumped into in the crowd. Wataru got a better look at her. Her cloak was
 worn and had seen better days, but her stance told that she was not a regular
 street urchin.
 
--- ”What do you think you are doing?” - Elephant cleric asked with a clear
+-- "What do you think you are doing?"- Elephant cleric asked with a clear
 discontent.
 
--- ”Listen Elephant-man, I know where you’re going, and believe it or not, our
-paths did not cross by accident.” - she shifted and moved a bit further to the
-centre of the alley, - ”I am going the same way you are.”
+-- "Listen Elephant-man, I know where you’re going, and believe it or not, our
+paths did not cross by accident."- she shifted and moved a bit further to the
+centre of the alley, - "I am going the same way you are."
 
--- ”And where would that be?” - her words did not seem to convince the loxodon.
+-- "And where would that be?"- her words did not seem to convince the loxodon.
 
--- ”We have a friend in common, and he needs our help, do not waste time
-arguing and let’s settle the questions while we move.” - she pressed the
+-- "We have a friend in common, and he needs our help, do not waste time
+arguing and let’s settle the questions while we move."- she pressed the
 elephant to take action.
 
--- ”Who are you talking about?”, - the beast in Boros uniform asked the slim
+-- "Who are you talking about?",- the beast in Boros uniform asked the slim
 human still not believing a word.
 
--- ”Neirius!” - woman exhaled sharply - ”Are you satisfied? Can we move now?”
+-- "Neirius!"- woman exhaled sharply - "Are you satisfied? Can we move now?"
 
 The ‘phant nodded and was about to take off as someone repeated the exact words
-mimicking his voice: “Who are you talking about?”, followed by a nasty loud
-cackle. “Are you satisfied? Can we move now?” - another voice, this time
+mimicking his voice: "Who are you talking about?", followed by a nasty loud
+cackle. "Are you satisfied? Can we move now?"- another voice, this time
 similar to the shaded woman’s, came from behind them as a red dextrous creature
 darted across their path. Another loud cackle filled the alley. Suddenly, out
 of nowhere a demon with two horns on the sides of its head leapt on loxodons’
@@ -103,28 +104,28 @@ happening behind the corner, but everyone was too busy with their lives at
 stake to inspect what was going on. After the last demon was slain, the woman
 spoke up:
 
---”Nice moves elephant man.”
+--"Nice moves elephant man."
 
---”Thanks.” - mumbled the loxodon.
+--"Thanks."- mumbled the loxodon.
 
---”Nai is the name.” - rogue introduced herself.
+--"Nai is the name."- rogue introduced herself.
 
---”Wataru” - the elephant man replied explicitly stressing the last vowel.
+--"Wataru",- the elephant man replied explicitly stressing the last vowel.
 
 Just as the introduction was over a conjurer appeared from the same side where
 the commotion and crowd shouts were heard.
 
---“What have you done? You ruined my show! You have slain my act!”
+--"What have you done? You ruined my show! You have slain my act!"
 
---“Move out of the way” - loxodon “kindly” asked, yet the conjurer refused and
+--"Move out of the way",- loxodon "kindly" asked, yet the conjurer refused and
 looked angry.
 
---“Just let us pass, or the same that happened to your act will happen to you”,-
+--"Just let us pass, or the same that happened to your act will happen to you",-
 the human tried to reason, while removing the sword from the remains of her
 opponent, shaking off the blood and sheathing the blade.
 
 Rakdos Beastmaster was not impressed, nor intimidated by the two’s efforts, and
-yet another fight broke off. It was rather quickly ended by a powerful bolt of
+yet another fight broke off. Which was rather quickly ended by a powerful bolt of
 pure light emanating from a locket in elephants hands. A crowd started moving
 towards the explosion of light with ovations and applause, thinking this was
 just another of Rakdos performances. Elephant and the human pushed through
@@ -162,15 +163,15 @@ further. Drag marks were quite obvious across the centre of the lab and clearly
 were leading towards the stairs that led outside through the door. Wataru
 remembered Neirius being a very careful individual and thoroughly searched for
 a secret passage or door and soon found a way to the second floor where Neirius
-had his living quarters. It looked messy. It looked foul. The smell and the
-view was not something you would like to experience. Ever. Clothing, bed
-sheets, excrements, rotten food, papers everything was scattered around the
-room. After searching through it they didn’t find any clue where Neirius might
-have gone, but it was clear that something bad went on here. On their way back
-they stumbled on a money pouch containing 20 platinum Orzhov minted coins.
-Phant suggested to share it and Nai accepted, after all, the place will
-probably be robbed by someone else, so there was no point in leaving anything
-there.
+had his living quarters. It looked messy and barely livable. Clothes were
+scatered around, bed sheets were tangled up, pieces of rotten food lying here
+and there. And every flat surface was just layered with sheets of paper. Most
+probably the scientist living here spent all his waking hours trying to
+describe the universe. Or at least that is what Wataru thought. After searching
+through it they didn’t find any clue where Neirius had gone. But they did
+stumble upon a money pouch containing 20 platinum Orzhov minted coins. Phant
+suggested to share it and Nai accepted, after all, the place will probably be
+robbed by someone else, so there was no point in leaving anything there.
 
 When they walked out of the destroyed lab outside, the sun had already set and
 the street was laying in shadows extending from the ghastly night torches. With
@@ -194,22 +195,22 @@ child, at most four years old, opened the door and pointed to the elderly, yet
 still lively looking lady. She introduced herself as Matron Matilda and
 welcomed the strange guests inside.
 
--- “We are looking for two kids, about this big, with eyes and ears,
-human,...”,- Wataru began to explain but was cut off by Nai, who precisely
+--"We are looking for two kids, about this big, with eyes and ears,
+human,...",- Wataru began to explain but was cut off by Nai, who precisely
 explained how the kids looked and why they are searching for them.
 
--- “This is a large house, full of children. I give them shelter and as much
+--"This is a large house, full of children. I give them shelter and as much
 love as I can, but I do not track them at all time. This is all I can do for
 them. I would be very grateful if you could spare some coin for the orphans. It
-is hard to keep all of these kids at bay.”, - Matilda swiftly transitioned to
+is hard to keep all of these kids at bay.",- Matilda swiftly transitioned to
 the business side of things.
 
 Nai and Wataru opened their pouches and gave 5 gold each. The eyes of the
 matron lit up with happiness.
 
--- “Why you are too kind! We don’t have much to offer in return, but please
+--"Why you are too kind! We don’t have much to offer in return, but please
 stay with us for dinner. It is about ready. Come, my children, give your thanks
-to these noble guests!”- as Matron called out a horde of kids came and touched
+to these noble guests!"- as Matron called out a horde of kids came and touched
 and hugged both Wataru and Nai.
 
 Kids started talking what will they do with these riches. Maybe they will buy
@@ -234,31 +235,31 @@ what she was doing in the lab and how a man was dragged away from the
 laboratory earlier in the day. Meanwhile, Wataru carefully approached the boy,
 who sat down a bit further away and tried to talk with him:
 
---”Boy, what you did in the lab?”- elephant trumpeted.
+--"Boy, what you did in the lab?"- elephant trumpeted.
 
---”I,... I was searching for lightning… I will be a mage one day!”- the boy
+--"I,... I was searching for lightning… I will be a mage one day!"- the boy
 proclaimed.
 
 Suddenly elephants tone changed, he looked deep into the boys' eyes and
 continued with tenderness:
 
---”Good good, did you find any lightning there?”
+--"Good good, did you find any lightning there?"
 
---”Yes…”,- the boy took out a piece of mizzium, which seemed like taken out
+--"Yes…",- the boy took out a piece of mizzium, which seemed like taken out
 from a particular apparatus in Neirius lab.
 
---”I see, you will make fine lightning with this thing. I am a bit of lightning
-mage myself…”
+--"I see, you will make fine lightning with this thing. I am a bit of lightning
+mage myself…"
 
---”You really are?”- the boy asked with wide eyes and quickly hid the piece
-under his clothes, -”I am called Jack, what is your name?”
+--"You really are?"- the boy asked with wide eyes and quickly hid the piece
+under his clothes, -"I am called Jack, what is your name?"
 
---”Wataru, Thunder Cleric”,- elephant proudly introduced himself. -”Did you see
-what happened in the lab?”
+--"Wataru, Thunder Cleric",- elephant proudly introduced himself. -"Did you see
+what happened in the lab?"
 
---”Group of large guys from the church nearby came in and smashed the door,
+--"Group of large guys from the church nearby came in and smashed the door,
 then they took someone and dragged him back to the church. There was some sort
-of magical pillory on the white-haired man, he seemed very tired…”
+of magical pillory on the white-haired man, he seemed very tired…"
 
 Adventurers talked a bit more with the kids and had a filling meal. But it
 seemed that only Wataru regained his strength, Nai still looked pretty beat up
@@ -286,16 +287,16 @@ door and Wataru went inside the church. The elephant went in, looked around and
 sat in the front row. An Orzhov pontiff at the altar was reading a list of
 depths following numbers. He monotonically chanted:
 
---”... Year 10095, borrowed 3000 zinos, repaid 976 zinos. Year 10096, repaid
+--"... Year 10095, borrowed 3000 zinos, repaid 976 zinos. Year 10096, repaid
 1222 zinos. Year 10097, overall depth - 134764 zinos, on current terms
-estimated repayment in 260 years, give or take. Please sign your name here.”
+estimated repayment in 260 years, give or take. Please sign your name here."
 
 A thrull appeared with a gold quill and passed it to the man in front of the
 altar. The man took the quill, stabbed it into his palm and wrote his name in
 blood.
 
---”Thank you and please hold a great and long service to the Orzhova, you may
-go.”
+--"Thank you and please hold a great and long service to the Orzhova, you may
+go."
 
 Thrull escorted the man to the back chamber in the church. The line of
 condemned people now consisted only of two figures. The last one in the line
@@ -309,6 +310,6 @@ of a door being forcefully opened and ran towards the front of the church. She
 saw the loxodon charging into the night and followed closely behind, making
 sure they are not followed. They regrouped quite a way further in a dark and
 silent alley. Wataru put Neirius down and investigated his condition. It wasn’t
-good. He was bound by a nasty Orzhov enchantment, called “The Pillory of the
-Sleepless”. By Wataru’s calculations, Neirius had around 6 hours to be
+good. He was bound by a nasty Orzhov enchantment, called "The Pillory of the
+Sleepless". By Wataru’s calculations, Neirius had around 6 hours to be
 dispelled or he would die or worse - forever drown in madness.
