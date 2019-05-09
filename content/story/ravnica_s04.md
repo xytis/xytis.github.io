@@ -230,7 +230,7 @@ new pet. Vedalken simply walked directly towards Zonot Seven, expecting others
 would follow her through the crowd.
 
 Better part of the next hour they navigated through densely populated area of
-Blistercoils, and came to the eastern side of Zonot Seven. A huge hole with
+The Blistercoils, and came to the eastern side of Zonot Seven. A huge hole with
 waterfalls from all sides went down as much as they could see.
 
 --"Ok, our goal is directly on the other side."- Katrille announced, -"We want

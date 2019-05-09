@@ -13,7 +13,7 @@ soon, and the song is calling me back to my duty in the forest."- Neia looked
 longingly at the clear skies, -"Blessings of Mat'Selesnya to you all".
 
 The party looked after the elvish girl and her wolf striding into the alleys of
-Blistercoils.
+The Blistercoils.
 
 --"We should start with Tin street. I have a hunch that this pickaxe originated
 there."- Nai gave her thoughts on the subject.

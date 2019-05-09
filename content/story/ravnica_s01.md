@@ -40,7 +40,7 @@ motioned for the elephant to pass.
 
 The large beast involuntary checked his pockets to see if anything was missing,
 but all was in order, so he hastily moved through a side street towards Neirius
-lab in Blistercoils. It was getting dark, and there was not much time till
+lab in The Blistercoils. It was getting dark, and there was not much time till
 sunset. The unusual words sat uneasily atop the elephant’s mind. What could
 have happened to Neirius to send him such an urgent notice? He was thinking to
 himself while rushing through the busy streets and dark alleys between them
