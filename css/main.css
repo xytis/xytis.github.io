@@ -150,7 +150,7 @@ section.main {
   }
 }
 section.header {
-  background-color: #f7f7f7;
+  background-color: transparent;
 }
 section.header .container {
   -webkit-align-items: center;
@@ -259,7 +259,7 @@ section.header nav ul li:hover {
   }
 }
 section.icons {
-  background-color: #f7f7f7;
+  background-color: transparent;
 }
 section.icons .container {
   -webkit-align-items: center;
@@ -479,7 +479,8 @@ section.main .container .content .post-item {
   -ms-align-items: center;
   align-items: center;
   display: list-item;
-  list-style: disc inside;
+  margin-left: 1em;
+  list-style: none;
 }
 section.main .container .content .post-item .meta {
   font-size: 14px;
@@ -522,7 +523,6 @@ section.main {
   }
   section.main .container .content .post-item {
     display: flex;
-    list-style: none;
   }
   section.main .container .content .post-item .meta {
     display: block;
@@ -650,8 +650,7 @@ section.main .content .markdown ul {
   margin-bottom: 1.25rem;
 }
 section.main .content .markdown li {
-  list-style-type: disc;
-  list-style-position: inside;
+  list-style-type: none;
 }
 section.main .content .markdown em {
   font-style: italic;
