@@ -6,16 +6,16 @@ date: 2019-03-04
 
 # Unlikely acquaintances
 
-Evening crowd was thick. A heavily panting young boy was pushing through
-looking for someone. His eyes blinked quickly while filtering the faces of the
-crowd. Suddenly his gaze fixated on a loxodon at the side of the street calmly
+Evening crowd was thick. A heavily panting young boy was pushing through it
+looking for someone. His eyes blinked quickly while filtering the faces in the
+crowd. Suddenly his gaze fixed on a loxodon at the side of the street calmly
 browsing through some merchandise.
 
 --"Here you go sir",- the courier said under his breath and pressed a piece of
 paper into thick elephant hand.
 
---"Mhm",- murmured the ‘phant, while nodding and with a motion of his large
-head hinted the boy that he should leave now.
+--"Mhm",- murmured the ‘phant and motioned with his large head hinting the boy
+to leave.
 
 As the boy turned his back and blended in the thick crowd the ‘phant broke the
 Izzet seal on the paper. His ever calm face darkened as his eyes went over the
@@ -27,11 +27,11 @@ note:
     I beg for your help,
     Neirius
 
-The loxodon turned westward and started rowing through the crowd as another
-figure bumped into him. The elephant dropped an angry look at a small humanoid
-who snapped with frustration in a womanly voice:
+The loxodon turned westward and started rowing through people as another figure
+bumped into him. The elephant dropped an angry look at a small humanoid who
+snapped with frustration in a womanly voice:
 
---"Watch where you’re going elephant man!"
+--"Watch where you’re going elephant-man!"
 
 --"I am going where I need to go, move!"
 
@@ -42,9 +42,10 @@ The large beast involuntary checked his pockets to see if anything was missing,
 but all was in order, so he hastily moved through a side street towards Neirius
 lab in The Blistercoils. It was getting dark, and there was not much time till
 sunset. The unusual words sat uneasily atop the elephant’s mind. What could
-have happened to Neirius to send him such an urgent notice? He was thinking to
-himself while rushing through the busy streets and dark alleys between them
-when he heard a loud snap and a sneeze behind him. Turning around he saw a
+have happened to Neirius to send him such an urgent notice?
+
+He was pondering while rushing through the busy streets and dark alleys between
+them when he heard a loud snap and a sneeze behind him. Turning around he saw a
 shadowy figure sulking by a corner he’d just passed.
 
 --"Who’s there?"- His low voice trumpeted in the alley.
@@ -52,27 +53,27 @@ shadowy figure sulking by a corner he’d just passed.
 --"Hello again."- The dark figure answered slowly moving in from the shadows.
 
 A soft smile was visible under a deep blue hood. It was the same human he’d
-just bumped into in the crowd. Wataru got a better look at her. Her cloak was
-worn and had seen better days, but her stance told that she was not a regular
-street urchin.
+bumped into in the crowd. Wataru got a better look at her. Her cloak was worn
+and had seen better days, but her stance told that she was not a regular street
+urchin.
 
--- "What do you think you are doing?"- Elephant cleric asked with a clear
+--"What do you think you are doing?"- Elephant cleric asked with a clear
 discontent.
 
--- "Listen Elephant-man, I know where you’re going, and believe it or not, our
+--"Listen elephant-man, I know where you’re going, and believe it or not, our
 paths did not cross by accident."- she shifted and moved a bit further to the
-centre of the alley, - "I am going the same way you are."
+centre of the alley, -"I am going the same way you are."
 
--- "And where would that be?"- her words did not seem to convince the loxodon.
+--"And where would that be?"- her words did not seem to convince the loxodon.
 
--- "We have a friend in common, and he needs our help, do not waste time
+--"We have a friend in common, and he needs our help, do not waste time
 arguing and let’s settle the questions while we move."- she pressed the
 elephant to take action.
 
--- "Who are you talking about?",- the beast in Boros uniform asked the slim
+--"Who are you talking about?",- the beast in Boros uniform asked the slim
 human still not believing a word.
 
--- "Neirius!"- woman exhaled sharply - "Are you satisfied? Can we move now?"
+--"Neirius!"- woman exhaled sharply -"Are you satisfied? Can we move now?"
 
 The ‘phant nodded and was about to take off as someone repeated the exact words
 mimicking his voice: "Who are you talking about?", followed by a nasty loud
@@ -90,29 +91,28 @@ Boros issued plate armour the cleric was wearing. The third demon leapt from
 his hiding place behind a pile of junk in the back of the alley, shook his head
 with one missing horn, laughed maniacally and swung spiked chains at the woman
 in a blue cloak, tearing through her clothes and cutting into the skin. The
-fight ended quickly and brutally for both sides. The elephant was bitten into
-his knee pit, releasing another powerful arc of retaliating magic. The suited
-demon had his face smashed in by a clerical hammer. One-horned demon received a
-dagger into the left eye and was sliced in half by cloaked woman’s shortsword,
-but his upper half exhaled a mind shaking laughter which sunk heavily into the
-girl’s mind. Knee biting demon was the last to die. His ragged, presumably once
-white wedding dress became red from blood as rogues’ sword slid down his spine,
+fight ended quickly and brutally. The elephant was bitten into his knee pit,
+releasing another powerful arc of retaliating magic. The suited demon had his
+face smashed in by a clerical hammer. One-horned demon received a dagger into
+the left eye and was sliced in half by cloaked woman’s shortsword, but his
+upper half exhaled a mind shaking laughter which sunk heavily into the girl’s
+mind. Knee biting demon was the last to die. His ragged, presumably once white
+wedding dress became red from blood as rogues’ sword slid down his spine,
 piercing it top to bottom. Even though the creature laughed in his horrific
 dying laughter, his appearance was too pitiful to do any harm to either loxodon
-either human minds. In the heat of fighting couple heard some commotion
-happening behind the corner, but everyone was too busy with their lives at
-stake to inspect what was going on. After the last demon was slain, the woman
-spoke up:
+either human minds. In the heat of battle couple heard some commotion happening
+behind the corner, but they were too busy with their lives at stake to inspect
+what was going on. After the last demon was slain, the woman spoke up:
 
 --"Nice moves elephant man."
 
 --"Thanks."- mumbled the loxodon.
 
---"Nai is the name."- rogue introduced herself.
+--"Nai is the name."- rogue introduced herself with a graceful bow.
 
 --"Wataru",- the elephant man replied explicitly stressing the last vowel.
 
-Just as the introduction was over a conjurer appeared from the same side where
+Just as the introduction was over, a conjurer appeared from the same side where
 the commotion and crowd shouts were heard.
 
 --"What have you done? You ruined my show! You have slain my act!"
@@ -125,10 +125,10 @@ the human tried to reason, while removing the sword from the remains of her
 opponent, shaking off the blood and sheathing the blade.
 
 Rakdos Beastmaster was not impressed, nor intimidated by the two’s efforts, and
-yet another fight broke off. Which was rather quickly ended by a powerful bolt of
-pure light emanating from a locket in elephants hands. A crowd started moving
-towards the explosion of light with ovations and applause, thinking this was
-just another of Rakdos performances. Elephant and the human pushed through
+yet another fight broke off. Which was rather quickly finished by a powerful
+bolt of pure light emanating from a locket in elephants hands. A crowd started
+moving towards the explosion of light with ovations and applause, thinking this
+was just another of Rakdos performances. Elephant and the human pushed through
 gathering crowd and disappeared in another alley before anyone could gather
 what had really happened.
 
@@ -302,9 +302,9 @@ Thrull escorted the man to the back chamber in the church. The line of
 condemned people now consisted only of two figures. The last one in the line
 was magically shackled Neirius.
 
-The Boros cleric pondered for a moment and decided to take action. He cast a
-cloud of fog around the pontiff and grabbed Neirius with one hand and sprinted
-as fast as his thick legs could go out of the church. He pushed the heavy door
+The Boros cleric pondered for a moment and decided to take action. He summoned
+cloud of fog around the pontiff and grabbed Neirius with one hand and sprinted,
+as fast as his thick legs could, out of the church. He pushed the heavy door
 with his free hand and disappeared into the night. Nai luckily heard the noise
 of a door being forcefully opened and ran towards the front of the church. She
 saw the loxodon charging into the night and followed closely behind, making
