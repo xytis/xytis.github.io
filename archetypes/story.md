@@ -1,7 +1,7 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replaceRE "[-_]" " " .Name | title }}"
 layout: story
-date: {{ .Date.Format "2000-01-01" }}
+date: "{{ dateFormat "2006-01-02" .Date }}"
 draft: true
 ---
 
