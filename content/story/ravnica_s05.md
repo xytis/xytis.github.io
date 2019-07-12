@@ -228,7 +228,8 @@ some cherries."
 
 --"Cherries. Ripe ones at that."
 
-Nai looked with confusion at Katrille.
+Nai looked with confusion at Katrille, who as well as Shinigami left the poor
+merchant alone and stood nearby.
 
 --"Well you heard her. Bring some."
 
@@ -339,8 +340,8 @@ across the room. He stopped next to a small bed where he spent last few days
 according to the nurse that just left the room. His head was still a bit light
 from whatever placed him in that bed. He tried hard to remember the last thing
 before the darkness. His lush brows curled up and deep wrinkles spread out
-across his patchy forehead. Numerous experiments both failed and successful
-had left marks on his skin. A knock on the door threw him off his thoughts.
+across his patchy forehead. Numerous experiments both failed and successful had
+left marks on his skin. A knock on the door threw him off his thoughts.
 
 --"Yes?"- his voice cracked mid word, he moved to the door and opened it.
 
@@ -360,7 +361,8 @@ literally carried you away from certain death and servitude to Orzhov." - Nai
 described the situation.
 
 Neirius looked intensely at the girl. He tried to remember if he sent a message
-to her, but his memory was failing him. He nodded in turn to Shinigami and Katrille.
+to her, but his memory was failing him. He nodded in turn to Shinigami and
+Katrille.
 
 --"We have to return to my laboratory! I have to work!"- Neirius eyes started
 darting across the plain room.
@@ -396,7 +398,7 @@ Katrille knowingly nodded, while others looked a bit lost.
 deeper and deeper in Golgari territory for a while now."
 
 --"Um, yes, I am sure we are on the right path."- Neirius tried to keep his
-tone as self-confident as possible.
+tone as confident as possible.
 
 --"So, we go, grab your device and take it to your lab?"- Wataru clarified the
 plan.
@@ -404,8 +406,9 @@ plan.
 --"Yes, precisely."
 
 The group was walking in a damp underground tunnel, with water stream flowing
-downward, bringing all kinds of refuse together with it. They entered a cistern,
-where the water collected from a number of raised tunnels and exited out through multiple others.
+downward, bringing all kinds of refuse together with it. They entered a
+cistern, where the water collected from a number of raised tunnels and exited
+out through multiple others.
 
 --"Um, now we need to take..."- Neirius rubbed his forehead, -"Third archway,
 the one with moss directly above it."
@@ -425,14 +428,14 @@ a broken hole in the side. One slippery slope and few turns later, together
 with a gushing stream of water they came to a large opening. Glowing mushrooms
 and luminescent spored kept the cavern dimly lit. They could make out some
 ancient parts of structure around a hill of refuse pilled up in the middle of
-the spacious caver. Water flowed down what seemed to be a staircase landing,
+the spacious cavern. Water flowed down what seemed to be a staircase landing,
 splashing below into a rocky floor. Stairs were leading down to both sides.
-Maybe, long time ago this was a dance hall or some sort of court. Now, only stone
-pillars supporting the concave roof were above lush underground vegetation.
-Water flowed around the refuse hill, making it look like an island in the dark
-gushing river. On top of this island, a metallic object was stuck in the moss.
-It seemed like it was here for ages, already partially covered in mushrooms and
-wines.
+Maybe, long time ago this was a dance hall or some sort of court. Now, only
+stone pillars supporting the concave roof were above lush underground
+vegetation.  Water flowed around the refuse hill, making it look like an island
+in the dark gushing river. On top of this island, a metallic object was stuck
+in the moss.  It seemed like it was here for ages, already partially covered in
+mushrooms and wines.
 
 --"Neirius, how long ago you said you did your experiment here?"
 

@@ -285,10 +285,10 @@ Nai thought that it could be Neirius among any of the living or already dead,
 so she hastily came back to Wataru and made a plan. Nai went to guard the back
 door and Wataru went inside the church. The elephant went in, looked around and
 sat in the front row. An Orzhov pontiff at the altar was reading a list of
-depths following numbers. He monotonically chanted:
+depts following numbers. He monotonically chanted:
 
 --"... Year 10095, borrowed 3000 zinos, repaid 976 zinos. Year 10096, repaid
-1222 zinos. Year 10097, overall depth - 134764 zinos, on current terms
+1222 zinos. Year 10097, overall dept - 134764 zinos, on current terms
 estimated repayment in 260 years, give or take. Please sign your name here."
 
 A thrull appeared with a gold quill and passed it to the man in front of the

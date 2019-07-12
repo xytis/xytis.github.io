@@ -1,4 +1,4 @@
---- 
+---
 title: "Ravnica S06"
 layout: story
 date: 2019-05-18
@@ -26,7 +26,7 @@ illumination of the thick chitinous armour.
 --"Then maybe you want to stay and find out?"- Nai retorted picking up the pace
 after Wataru and the others.
 
-Moments later, barely outrunning the beetle the party dove into the tunnel they
+Moments later, barely outrunning the beetle, the party dove into the tunnel they
 came here through. Beast slammed hard into the wall, making a dust cloud which
 covered the entrance. Muddy tunnel gave in and collapsed in front of the party.
 Mud and water clogged the way forward, but in a moment it fell down again,
@@ -206,7 +206,7 @@ explained, -"By the looks of it this is Izzet work."
 
 --"That seems like the only option, yes."- Neirius agreed.
 
---"MEAT!"
+--"MEAT!"- Shinigami screamed on top of her lungs into the cavern.
 
 Walking down the stream led to another Izzet maintenance tunnel, this had a
 trail of blood, which excited Shinigami. But within minutes they emerged in a
