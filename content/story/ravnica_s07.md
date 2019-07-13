@@ -429,7 +429,7 @@ bubble shrank to a tiny pebble.
 
 Few seconds later the creature dissipated after receiving a final eldrich blast
 and Shinigami went over the room to look outside. Azorius had almost disposed
-of all the mephits and were now fighting the large elemental.
+of all the mephits and were now fighting the remaining large creature.
 
 She turned around and pointed at once-again-ball-sized-mana-bubble. Her action
 was followed by yet another curse. This time it came from Katrille's mouth.
@@ -463,3 +463,31 @@ they were fighting before stepped into the room through the gap.
 
 --"Well...",- Katrille prepared her spells again to fight the creature.
 
+--"We need to ground it!",- Wataru shouted over the crackling of electric
+discharges on the creature's body.
+
+--"How are we going to tackle it?",- Shinigami asked confused, -"It will shock
+us to death if we hug it!"
+
+--"No, you simpleton!",- Wataru tore one of the larger cables off the floor and
+jerked it loose from the machine it was connected to, -"We will use this to
+drain the electricity from it."
+
+--"That could work! Rakdos, take the end and slam it into it!",- Katrille
+ordered while shooting magic darts at the creature with little effect.
+
+--"Why is it always Rakdos this, Shinigami that?",- girl mumbled while taking
+the cable, with a crazy scream she ran into the creature like a knight with a
+wobbly lance.
+
+As the cable connected to the charged body a web of discharges disappeared from
+it in an instant, creature roared and slammed the girl throwing her off balance
+to the ground. Wataru stepped the between fallen girl and the creature and
+started pounding the smoky form with his hammer. Shinigami stood up, summoned
+her scythe and circled the amorphous being to get a better position. Her final
+swing cut the creature in half and with that the smoke dropped on the floor and
+dissipated.
+
+Wataru swiped sweat from his forehead and looked and the crack in the wall.
+It seemed dormant at the moment, but Krokt knows what other creatures can
+get through it now.
