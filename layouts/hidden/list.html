@@ -2,9 +2,9 @@
 <section class="main">
   <div class="container">
     <div class="content">
-      <div class="page-heading">Latest</div>
+      <div class="page-heading">Secrets</div>
       <ul>
-        {{ range where (where (.Data.Pages.ByPublishDate).Reverse "PublishDate" "gt" (now.AddDate -1 0 0) ) ".Section" "!=" "hidden"}}
+        {{ range (.Data.Pages.ByPublishDate).Reverse }}
         {{ partial "li.html" . }}
         {{ end }}
       </ul>
