@@ -709,3 +709,13 @@ section.main .content .markdown tbody tr:nth-child(odd) td,
 section.main .content .markdown tbody tr:nth-child(odd) th {
   background-color: #f7f7f7;
 }
+section.main .content .markdown figure {
+  float: right;
+  text-align: right;
+  text-indent: 0;
+}
+section.main .content .markdown figure figcaption p {
+  font-style: italic;
+  font-size: smaller;
+}
+
