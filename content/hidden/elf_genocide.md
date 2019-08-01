@@ -7,7 +7,7 @@ date: 2019-07-30
 ## Painful love
 
 It was a bright summer day when I stepped out from my transport thopter to
-shores of Jerezu. I knew about this part of the world only by the handful of
+shores of Jezeru. I knew about this part of the world only by the handful of
 facts I got from local notary's office. This area had been marked for
 reclamation fourteen hundred years ago and officially purchased by Simic few
 hundred years later. Naturally all paperwork was handled by Orzhov, major
