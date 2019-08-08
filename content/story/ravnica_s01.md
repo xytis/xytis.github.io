@@ -5,6 +5,7 @@ date: 2019-03-04
 ---
 
 # Unlikely acquaintances
+## 10076 Mokosh 7
 
 Evening crowd was thick. A heavily panting young boy was pushing through it
 looking for someone. His eyes blinked quickly while filtering the faces in the

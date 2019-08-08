@@ -328,7 +328,7 @@ Nai looked at the lurching elephant with longing gaze in her eyes.
 Party together with Wyn, led the 'phant to the hut and rested for the night,
 each in their own thoughts.
 
-...
+## 10076 Mokosh 10
 
 Morning came a bit rough on the edges, sky was overcast, Wataru could smell
 rain in the distance. Nai commanded the party to leave for Neirius as soon as

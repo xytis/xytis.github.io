@@ -251,6 +251,7 @@ widely, -"And if something comes for me tonight, maybe I will have someone who
 can protect me this time, heh."
 
 # "You can't understand science"
+## 10076 Mokosh 11
 
 Wataru woke up from the sound of crackling electricity. There were muffled
 shouts coming from the stairwell. He looked around the darkened room he slept
