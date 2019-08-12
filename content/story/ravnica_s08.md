@@ -1,5 +1,5 @@
 ---
-title: "Ravnica S07"
+title: "Ravnica S08"
 layout: story
 date: "2019-08-01"
 ---
