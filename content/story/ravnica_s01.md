@@ -314,3 +314,5 @@ silent alley. Wataru put Neirius down and investigated his condition. It wasn’
 good. He was bound by a nasty Orzhov enchantment, called "The Pillory of the
 Sleepless". By Wataru’s calculations, Neirius had around 6 hours to be
 dispelled or he would die or worse - forever drown in madness.
+
+<!-- vim: wrap linebreak nolist: -->

@@ -417,3 +417,5 @@ Shinigami started clapping in excitement.
 --"No, and I suggest you get going. I have to finish cleaning the mess. And you
 have a pickaxe to investigate."
 
+
+<!-- vim: wrap linebreak nolist: -->

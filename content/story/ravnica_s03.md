@@ -394,3 +394,5 @@ happen. May his soul rest within the Conclave."
 --"Not so fast. I think we still have hope."- Katrille intercepted.
 
 ...
+
+<!-- vim: wrap linebreak nolist: -->
