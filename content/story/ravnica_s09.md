@@ -134,4 +134,6 @@ Shinigami furrowed her brows while Wataru touched his pouch absentmindedly.
 
 A moment of silence befell the group, everybody was considering watching the pale girl in the ring, fighting to the death. Apart from Rozhe and Elfur, everyone silently smiled. Including Shinigami.
 
-<!-- vim: wrap linebreak nolist: -->
+<!--
+  vim: wrap linebreak nolist:
+-->
