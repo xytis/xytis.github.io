@@ -395,4 +395,6 @@ happen. May his soul rest within the Conclave."
 
 ...
 
-<!-- vim: wrap linebreak nolist: -->
+<!-- 
+vim: wrap linebreak nolist:
+-->

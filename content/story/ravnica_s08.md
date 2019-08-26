@@ -407,4 +407,6 @@ out of a stairwell leading from Zonot, pointed Wataru to grab the frozen man
 and all of the party disappeared back in the damp tunnels of undercity.
 
 
-<!-- vim: wrap linebreak nolist: -->
+<!-- 
+vim: wrap linebreak nolist: 
+-->

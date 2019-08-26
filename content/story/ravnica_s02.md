@@ -182,4 +182,6 @@ turned back while helping Neia to bandage and clean wolf wounds:
 --"I do not have much, but you seem tired. Would you like a place to sleep for
 the day?"
 
-<!-- vim: wrap linebreak nolist: -->
+<!--
+vim: wrap linebreak nolist: 
+-->

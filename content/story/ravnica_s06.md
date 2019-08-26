@@ -224,4 +224,6 @@ warm food."- Neirius looked around in the wasted lab, -"I have some mending to
 do. Place the device in the center please, I will join you in couple of hours.
 I still have a favour to ask. Open a tab in my name."
 
-<!-- vim: wrap linebreak nolist: -->
+<!-- 
+vim: wrap linebreak nolist: 
+-->

@@ -493,4 +493,6 @@ Wataru swiped sweat from his forehead and looked and the crack in the wall.
 It seemed dormant at the moment, but Krokt knows what other creatures can
 get through it now.
 
-<!-- vim: wrap linebreak nolist: -->
+<!-- 
+vim: wrap linebreak nolist: 
+-->

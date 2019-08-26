@@ -418,4 +418,6 @@ Shinigami started clapping in excitement.
 have a pickaxe to investigate."
 
 
-<!-- vim: wrap linebreak nolist: -->
+<!-- 
+vim: wrap linebreak nolist:
+-->
