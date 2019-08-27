@@ -9,28 +9,28 @@ date: "2019-08-01"
 "We should close the portal", Katrille started after the dust of their last
 fight calmed down.
 
-"Any ideas on how are we going to do that?", Wataru looked at his own blood
-on his palms. "Maybe we can leave this to the local goblins?"
+"Any ideas on how are we going to do that?", Wataru looked at his own blood on
+his palms. "Maybe we can leave this to the local goblins?"
 
 "I suggest we throw bricks into it until it is full!", Shinigami proclaimed,
 her suggestion bouncing off two stone like faces.
 
-"Look, I appreciate that you tried, but frankly I doubt it will work. Given
-it is leading to another plane and all that. Not that your tiny Rakdos educated
+"Look, I appreciate that you tried, but frankly I doubt it will work. Given it
+is leading to another plane and all that. Not that your tiny Rakdos educated
 brain would grasp it.", Wataru was keen on pressing the insult.
 
-"HEY! I know planes! Rakdos has a plane of his own! I learned about them from
-a bloodwitch!", Shinigami stood her ground, though shakily at best.
+"HEY! I know planes! Rakdos has a plane of his own! I learned about them from a
+bloodwitch!", Shinigami stood her ground, though shakily at best.
 
 "Riiight, and that makes you the sole expert on cross plane travel?", Wataru
 raised his trunk in agitation.
 
-"Guys, guys. Stop. I understand that there were some, _arguable_
-decisions,", Katrille looked at Shinigami, "but we have a situation on our
-hands now. And if anyone has more feasible ideas, I would like to hear them."
+"Guys, guys. Stop. I understand that there were some, _arguable_ decisions,",
+Katrille looked at Shinigami, "but we have a situation on our hands now. And if
+anyone has more feasible ideas, I would like to hear them."
 
-"If you think my idea is worthless, let's ask the goblins for help.",
-Shinigami said sarcasticaly.
+"If you think my idea is worthless, let's ask the goblins for help.", Shinigami
+said sarcasticaly.
 
 Wataru scratched his trunk and noded. He turned and walked down the stairs,
 with two girls following after a brief pause.
@@ -44,15 +44,15 @@ with two girls following after a brief pause.
 Goblin stopped reassembling a device that was damaged during the chaos and
 turned to the group.
 
-"Yes, sure. As agreed 10 zibs per elemental, given you did not destroy
-anything upstairs."
+"Yes, sure. As agreed 10 zibs per elemental, given you did not destroy anything
+upstairs."
 
 "No no no, green meat ears, 10 zinos per elemental.", Shinigami pulled her
 scythe out of the void and pointed it toward the goblin.
 
-"We can't just give you platinum mints! We shouldn't throw away funds like
-that to...", another goblin stepped in to the discussion.and overlooked the
-party with his two black beady eyes, "I don't even know how to call you."
+"We can't just give you platinum mints! We shouldn't throw away funds like that
+to...", another goblin stepped in to the discussion.and overlooked the party
+with his two black beady eyes, "I don't even know how to call you."
 
 "It matters little how you call us. We had an agreement of sorts, but if you
 had not noticed, pretty nasty things came out from the portal.", Wataru took a
@@ -66,21 +66,21 @@ notes about what transpired here?"
 with the tip of her weapon.
 
 "Please do not resort to violence. My name in Brix and I am in charge of the
-lab while Sullemand is not available.", third goblin spoke up after he
-finished tuning a transfuse device in the corner of the room. "I appreciate
-your efforts in quenching the immediate danger, for this I can issue a decent
-reward, if you mind lowering your weapons?"
+lab while Sullemand is not available.", third goblin spoke up after he finished
+tuning a transfuse device in the corner of the room. "I appreciate your efforts
+in quenching the immediate danger, for this I can issue a decent reward, if you
+mind lowering your weapons?"
 
 Wataru gestured to Shinigami to step back from the goblin.
 
-"Fiiine", Rakdos reluctantly lovered her scythe and it vanished in a burst
-of hellish flame.
+"Fiiine", Rakdos reluctantly lovered her scythe and it vanished in a burst of
+hellish flame.
 
-"I hope we can come to understanding that we may not overpay for your
-efforts, as the funds are not ours to dispose.", Brix walked to a cabinet and
-reached inside. Few moments later he produced a pouch of coin and tossed it to
-Wataru. "Hope this will cover your injuries, now about those notes, could you
-describe in detail what happened upstairs?"
+"I hope we can come to understanding that we may not overpay for your efforts,
+as the funds are not ours to dispose.", Brix walked to a cabinet and reached
+inside. Few moments later he produced a pouch of coin and tossed it to Wataru.
+"Hope this will cover your injuries, now about those notes, could you describe
+in detail what happened upstairs?"
 
 "We fought a big smoke with lightning edges, then another one and a large
 one.", Shinigami explained. Meanwhile Wataru counted the coins.
@@ -94,8 +94,8 @@ Wataru paused and handed over some coins to Shinigami and Katrille.
 We discovered that those creatures are charged and emit bolts of electricity if
 touched. We also discovered that they can be hurt by magic."
 
-"Then by unfortunate turn of events, a scythe grounded the portal into the
-wall and formed a breach.", Katrille continued to describe the situation as
+"Then by unfortunate turn of events, a scythe grounded the portal into the wall
+and formed a breach.", Katrille continued to describe the situation as
 delicately as possible.
 
 "What do you mean _grounded_?", Brix'es eyebrow shot up in question.
@@ -109,8 +109,8 @@ shelf and turned around to face the party.
 
 "I am afraid so.", Wataru said.
 
-"I have an idea!", Shinigami nearly jumped from excitement, "Why don't we
-throw something into the portal?"
+"I have an idea!", Shinigami nearly jumped from excitement, "Why don't we throw
+something into the portal?"
 
 She touched the shoulder of the third goblin who was writing down this
 conversation.
@@ -140,8 +140,8 @@ Some time later both goblins and Rakdos girl returned, almost unscathed, if you
 would ignore that one of the goblins was convulsing from tiny electrical
 discharges that were still running back and forth on his skin.
 
-"Sizzlix reported that another creature is coming close to the portal.",
-Crix announced.
+"Sizzlix reported that another creature is coming close to the portal.", Crix
+announced.
 
 "I...I saw big... ick... element...ick...al.", convulsions made it hard for
 Sizzlix to speak, but his eyes were saying that his sacrifice was forth it.
@@ -177,14 +177,14 @@ heads as if being scolded.
 rec...ick...recommend that the portal must be closed due to incoming large
 creature."
 
-"I will be the judge of that.", Sullemand looked at the group standing in
-the middle of the lab, "You may leave now."
+"I will be the judge of that.", Sullemand looked at the group standing in the
+middle of the lab, "You may leave now."
 
-"So much for a 'thank you'?", Shinigami scoffed, "We saved your laboratory
-from smoke-lighting-blobs!"
+"So much for a 'thank you'?", Shinigami scoffed, "We saved your laboratory from
+smoke-lighting-blobs!"
 
-"Brix took care of reward to my knowledge, I need no more of your
-services.", Sullemand said while walking past the group, "Good bye."
+"Brix took care of reward to my knowledge, I need no more of your services.",
+Sullemand said while walking past the group, "Good bye."
 
 Group stood there watching tall vedalken followed by two goblins walk up the
 stairs.
@@ -199,35 +199,35 @@ group of Azorius lawmages were filling a report and evaluating the damage
 caused by this explosion.  Nai walked up towards the group, gently nodding to
 Wataru.
 
-"Where have you been? You missed a whole bunch of action.", Wataru scolded
-the human rogue.
+"Where have you been? You missed a whole bunch of action.", Wataru scolded the
+human rogue.
 
-"Here and there. Something came up and I had to tend to it.", Nai looked
-over the burn marks on Wataru's grey skin, "Somebody managed to rough you up
-pretty bad. Can't stay out of trouble I see?"
+"Here and there. Something came up and I had to tend to it.", Nai looked over
+the burn marks on Wataru's grey skin, "Somebody managed to rough you up pretty
+bad. Can't stay out of trouble I see?"
 
-"No, it was an...", his explanation was cut short by someone shouting his
-name in the street.
+"No, it was an...", his explanation was cut short by someone shouting his name
+in the street.
 
-"Mister Manchiki, Wataru Manchiki!", an elven knight came striding towards
-the loxodon.
+"Mister Manchiki, Wataru Manchiki!", an elven knight came striding towards the
+loxodon.
 
 "This is I. What you want?"
 
-"I have a letter from Selesnya, mister Vuduin Brykas sent me to find you.",
-elf was dressed in heavy armor, adorned by pieces of living plants.
+"I have a letter from Selesnya, mister Vuduin Brykas sent me to find you.", elf
+was dressed in heavy armor, adorned by pieces of living plants.
 
 "It is rare to have a Selesnyan military member to deliver a message. Why is
 this so important?", Wataru inquired.
 
 "I am sorry I do not know. I was tasked only to deliver this message."
 
-"Excuse me!", one of Azorius group members split from the group and
-approached the party, "Would you happen to know anything about this chaos?"
+"Excuse me!", one of Azorius group members split from the group and approached
+the party, "Would you happen to know anything about this chaos?"
 
-"We need a drink before we talk, morning took us by surprise, heh!",
-Shinigami grabbed the hands of Selesnya courier and Azorius lawmage and dragged
-them behind her. "Come I know a place nearby!"
+"We need a drink before we talk, morning took us by surprise, heh!", Shinigami
+grabbed the hands of Selesnya courier and Azorius lawmage and dragged them
+behind her. "Come I know a place nearby!"
 
 ...
 
@@ -235,8 +235,8 @@ Water and Some Fire inn was almost empty at this hour. A single sleeping human
 snored silently on one of the bigger round tables and an old goblin sat at the
 end of the bar and drank in silence.
 
-"I will need more of your fire, orge lady!", Shinigami was in weirdly good
-mood all of a sudden, but nobody wanted to question her change of heart.
+"I will need more of your fire, orge lady!", Shinigami was in weirdly good mood
+all of a sudden, but nobody wanted to question her change of heart.
 
 "Name's Jura. Same as yesterday?", her voice was still sweet and soft.
 
@@ -246,25 +246,25 @@ Six glasses were placed on the counter, murky liquid poured in.
 
 "For a wonderful morning!", Shinigami gulped her drink, others followed.
 
-"Why is this place called Water and Some Fire?", elven girl with Azorius
-badge came up to the bar.
+"Why is this place called Water and Some Fire?", elven girl with Azorius badge
+came up to the bar.
 
-"Because this is what I have here.", Jura motioned towards the shelves
-filled with bottles behind the bar, "Fire", then pointed to a large water
-barrel with a laddle on the side, "and water."
+"Because this is what I have here.", Jura motioned towards the shelves filled
+with bottles behind the bar, "Fire", then pointed to a large water barrel with
+a laddle on the side, "and water."
 
-"Would you have something more fiery in these shelves of yours? We have two
-new friends today.", Shinigami leaned on the bar.
+"Would you have something more fiery in these shelves of yours? We have two new
+friends today.", Shinigami leaned on the bar.
 
-"I always have something special", Jura pulled an ornamented bottle from
-below the bar with a green tinted liquid inside. "Care to try my latest brew?"
+"I always have something special", Jura pulled an ornamented bottle from below
+the bar with a green tinted liquid inside. "Care to try my latest brew?"
 
 Shinigami looked at the bootle through squinted eyes, then nodded.
 
 "Pour in another six."
 
-"I can not drink any more, I am on duty", a gentle sylvan accented voice
-came over from the table.
+"I can not drink any more, I am on duty", a gentle sylvan accented voice came
+over from the table.
 
 Rakdos spun on her heels and pushed one of the glasses back to the ogre.
 
@@ -356,8 +356,7 @@ must stop the change!" Crowd began to chant "Stop the change! Stop the change!"
 
 Group of adventurers stopped behind the crowd.
 
-"This looks fun!", Shinigami changed her tune to match the rhythm of the
-chant.
+"This looks fun!", Shinigami changed her tune to match the rhythm of the chant.
 
 She skipped towards a large hulking figure, grabbed a large horn sticking from
 it's head and jumped on it's shoulders.
@@ -406,7 +405,4 @@ superior later on. But at that moment robed man froze in place, Nai appeared
 out of a stairwell leading from Zonot, pointed Wataru to grab the frozen man
 and all of the party disappeared back in the damp tunnels of undercity.
 
-
-<!-- 
-vim: wrap linebreak nolist: 
--->
+<!-- vim: set wrap linebreak nolist: -->

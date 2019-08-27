@@ -10,28 +10,27 @@ Dark alleyway, where Wataru and Nai had stopped to inspect Neirius' condition
 previously empty and desolate filled with action and tension. Out of the blue
 vedalken turned a corner and bumped into firm loxodons back.
 
---"Ach!"- blueish creature exhaled.
+"Ach!" blueish creature exhaled.
 
---"What just...?"- Wataru started a sentence as a ghostly skeletal hand
-appeared out of thin mist and grabbed his smaller snout and clutched painfully.
+"What just...?" Wataru started a sentence as a ghostly skeletal hand appeared
+out of thin mist and grabbed his smaller snout and clutched painfully.
 
---"HRGMTH!"- surprised elephant released a weird and awkward sound into the
-alley.
+"HRGMTH!" surprised elephant released a weird and awkward sound into the alley.
 
 Out of the darkness, about 60 feet away, a figure in Neirius voice shouted:
 
---"What are you doing with me?!"
+"What are you doing with me?!"
 
 Nai, carefully inspected the creature in the shadows:
 
---"Put your coin-sack down and slowly emerge"- she ordered.
+"Put your coin-sack down and slowly emerge" she ordered.
 
 Creature stepped out from the shadows. It was a teenage girl, with silvery hair
 and pale white skin. Her festive Rakdos apparel menaced with leather straps and
 metal spikes shimmering in magilight illumination.
 
---"What are you doing with Neirius!"- she grunted in low voice and charged
-forward with her scythe unsheathed.
+"What are you doing with Neirius!" she grunted in low voice and charged forward
+with her scythe unsheathed.
 
 Wataru grabbed his hammer and did the same. While the two were running at each
 other, Nai slid into the shadows. Vedalken stood at the end of the alley
@@ -42,18 +41,18 @@ scythe in her hands and a shady looking lady with a dark blue cloak shouted
 something and just vanished somewhere in the darkness.
 
 The Rakdos girl fluidly ran around charging elephant and stopped above Neirius:
---"Oh, what trouble had you gotten me into now?"- she asked in a softer voice.
+"Oh, what trouble had you gotten me into now?" she asked in a softer voice.
 
 Loxodon stopped in his tracks, made a sharp turn and slammed his hammer in the
 girls stomach. Girl responded by pointing a finger at the elephant and demonic
 flames engulfed the Boros Cleric.
 
---"Dtud yxuqqg toyd, gio piiq!"- she hissed in abyssal.
+"Dtud yxuqqg toyd, gio piiq!" she hissed in abyssal.
 
 Before she could do anything else, Nai appeared behind her, pressed her dagger
 to her throat and carefully, for the third time in all this chaos, demanded:
 
---"Put your coin-sack down and drop your weapon!"
+"Put your coin-sack down and drop your weapon!"
 
 Rakdos girl did not answer to her demands, she instead demanded to tell what
 they have done to Neirius. She mumbled something about a letter and being his
@@ -62,10 +61,10 @@ friend, but Wataru was not having any of it.
 Meanwhile vedalken conjured a bunch of festive sparks around her, dragging all
 attention.
 
---"What is going on?! Can we analyse the situation like civilized..."- she
-could not finish the sentence before Nai quickly bonded the girl with rope and
-Boros loxodon euthanised the poor girl with his fist. -"... people"- blueish
-figure helplessly exhaled.
+"What is going on?! Can we analyse the situation like civilized..." she could
+not finish the sentence before Nai quickly bonded the girl with rope and Boros
+loxodon euthanised the poor girl with his fist. "... people" blueish figure
+helplessly exhaled.
 
 The remaining trio did manage to talk, instead of fighting. They realised that
 Katrille, Simic scientist, was a close friend of Neirius and did too receive
@@ -99,14 +98,14 @@ directly ahead.
 She sneaked ahead and found an half-ogre and four goblins surrounding a dire
 wolf, which was pressed against a tree.
 
---"Breegork take hide! Breegork kill wolf!"- large half-ogre with a huge battle
+"Breegork take hide! Breegork kill wolf!" large half-ogre with a huge battle
 axe shouted.
 
-Surrounding goblins were chanting: -"Fight! Fight! Fight! Fight!".
+Surrounding goblins were chanting: "Fight! Fight! Fight! Fight!".
 
 Suddenly an arrow came out of nowhere and sunk in the arm of the Ogre.
 
---"WRRAAARGHHHH! Breegork no feel pain!"
+"WRRAAARGHHHH! Breegork no feel pain!"
 
 Nai calculated her situation and released an arrow herself into the back of the
 monstrosity. Arrow did not sink too deep and the half-ogre only scanned his
@@ -121,9 +120,9 @@ the Breegork's ribcage. Then she swiftly jumped back, and seeing only one
 goblin which paid at least some attention to her actions, she made a cloud of
 dust and disappeared into thick foliage.
 
---"WAAAAAAAUUUUUUURRRGHHH!"- ogre shouted through pain. He took his axe with
-both hands and slammed it deep into the wolf head. The beast slumped on the
-ground helplessly, it was breathing hardly.
+"WAAAAAAAUUUUUUURRRGHHH!" ogre shouted through pain. He took his axe with both
+hands and slammed it deep into the wolf head. The beast slumped on the ground
+helplessly, it was breathing hardly.
 
 All goblins exhalted shouted together with their leader for his victory, as an
 angry loxodon stampeding through the forest appeared. He was carrying a limp
@@ -148,9 +147,9 @@ least it's eyes opened and it was able to get back on his shaking legs.
 Elf thanked her unexpected allies and asked how she could repay them. Nai
 pointed at Neirius body in the Wataru snout:
 
---"We are in need of a talented healer, do you know anyone like that here?"
+"We are in need of a talented healer, do you know anyone like that here?"
 
---"I... I do. Follow me."- she helped the limping wolf down the dark forest.
+"I... I do. Follow me." she helped the limping wolf down the dark forest.
 Party followed closely behind.
 
 They came to a livewood hut at the edge of the well kept forest. Neia, the dark
@@ -159,29 +158,27 @@ strong oaks, where other animals were resting from various injuries.
 
 One long knock on the door later, a figure appeared in the doorway.
 
---"What brings you... Och! Neia, what happened?"- an elderly elf, with black
-hair firmly packed into a bun behind his head, started gracefully walking
-towards the injured wolf.
+"What brings you... Och! Neia, what happened?" an elderly elf, with black hair
+firmly packed into a bun behind his head, started gracefully walking towards
+the injured wolf.
 
---"Wait! We don't have much time, please help this man!"- Wataru interfered
+"Wait! We don't have much time, please help this man!" Wataru interfered
 
 Elf took a long look at the elephant:
 
---"Wataru? Is it really you? Long time ago you roamed my gardens..."- elf stood
+"Wataru? Is it really you? Long time ago you roamed my gardens..." elf stood
 still for a moment, and remaining party members started rushing the elf to help
 Neirius. He nodded his head and moved over his body. Few minutes later the
 magical shroud concentrated into thick chains and broke disappearing in the dew
 covered grass. Neirius gasped for air and fell down unconscious.
 
---"He needs to rest"- elf stated. Wataru closely inspected his condition and
+"He needs to rest" elf stated. Wataru closely inspected his condition and
 confirmed that Neirius will sleep for at least few days.
 
 Elf moved to help the wolf and chatted a bit with Neia inaudibly to others. He
 turned back while helping Neia to bandage and clean wolf wounds:
 
---"I do not have much, but you seem tired. Would you like a place to sleep for
+"I do not have much, but you seem tired. Would you like a place to sleep for
 the day?"
 
-<!--
-vim: wrap linebreak nolist: 
--->
+<!-- vim: set wrap linebreak nolist: -->
