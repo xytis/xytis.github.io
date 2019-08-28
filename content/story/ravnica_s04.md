@@ -93,7 +93,7 @@ inexperienced party judging their capabilities.
 "We leave at dawn." Nai did not even bother to ask the old elf's permission to
 stay for the night.
 
-## 10076 Mokosh 9
+<date>10076 Mokosh 9</date>
 
 With the first rays of the morning sun, party led by Neia, paced through the
 waking forest. After spending the last few days in nature Nai and Katrille were
@@ -414,6 +414,5 @@ Shinigami started clapping in excitement.
 
 "No, and I suggest you get going. I have to finish cleaning the mess. And you
 have a pickaxe to investigate."
-
 
 <!-- vim: set wrap linebreak nolist: -->

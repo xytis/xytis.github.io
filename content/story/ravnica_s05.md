@@ -328,7 +328,7 @@ Nai looked at the lurching elephant with longing gaze in her eyes.
 Party together with Wyn, led the 'phant to the hut and rested for the night,
 each in their own thoughts.
 
-## 10076 Mokosh 10
+<date>10076 Mokosh 10</date>
 
 Morning came a bit rough on the edges, sky was overcast, Wataru could smell
 rain in the distance. Nai commanded the party to leave for Neirius as soon as
@@ -457,6 +457,5 @@ it by two handles out from the lush fungus and moss. A low rumble washed over
 the party coming from the far end of the cavern.
 
 "We should get moving", Neirius said pointing into the darkness.
-
 
 <!-- vim: set wrap linebreak nolist: -->

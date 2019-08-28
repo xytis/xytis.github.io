@@ -5,7 +5,8 @@ date: 2019-03-25
 ---
 
 # Perhaps some necessary evil
-## 10076 Mokosh 8
+
+<date>10076 Mokosh 8</date>
 
 Group woke up in the darkened interior of a livewood hut. Through tightly shut
 window blinds noise seeped from outside. Voices of children were responding to
