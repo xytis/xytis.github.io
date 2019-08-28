@@ -634,6 +634,10 @@ section.main .content .markdown p {
   margin-top: 0;
   margin-bottom: 1em;
 }
+section.main .content .markdown p date {
+  font-size: 1.1rem;
+  font-style: italic;
+}
 section.main .content .markdown ul,
 section.main .content .markdown ol,
 section.main .content .markdown dl {
