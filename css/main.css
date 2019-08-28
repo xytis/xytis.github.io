@@ -117,37 +117,17 @@ section.header {
   -ms-order: 0;
   order: 0;
 }
-section.icons {
+section.main {
   -webkit-order: 1;
   -moz-order: 1;
   -ms-order: 1;
   order: 1;
 }
-section.main {
+section.icons {
   -webkit-order: 2;
   -moz-order: 2;
   -ms-order: 2;
   order: 2;
-}
-@media (min-width: 600px) {
-  section.header {
-    -webkit-order: 0;
-    -moz-order: 0;
-    -ms-order: 0;
-    order: 0;
-  }
-  section.icons {
-    -webkit-order: 2;
-    -moz-order: 2;
-    -ms-order: 2;
-    order: 2;
-  }
-  section.main {
-    -webkit-order: 1;
-    -moz-order: 1;
-    -ms-order: 1;
-    order: 1;
-  }
 }
 section.header {
   background-color: transparent;
@@ -396,7 +376,7 @@ section.main .content .front-matter .meta {
 section.main .content .front-matter .date,
 section.main .content .front-matter .word-count,
 section.main .content .front-matter .reading-time .middot {
-  display: none;
+  display: initial;
 }
 section.main .content .front-matter .middot {
   font-size: 6px;
@@ -408,11 +388,6 @@ section.main .content .front-matter .middot:before {
   content: "•";
 }
 @media (min-width: 600px) {
-  section.main .content .front-matter .date,
-  section.main .content .front-matter .word-count,
-  section.main .content .front-matter .reading-time .middot {
-    display: initial;
-  }
   section.main .content .title-container .initials {
     display: none;
   }
@@ -514,7 +489,7 @@ section.main {
     padding-bottom: 60px;
   }
   section.icons {
-    padding-top: 60px;
+    padding-top: 32px;
     padding-bottom: 60px;
   }
   section.main {
