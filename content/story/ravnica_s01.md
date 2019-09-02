@@ -6,7 +6,7 @@ date: 2019-03-04
 
 # Unlikely acquaintances
 
-<date>10076 Mokosh 7</date>
+<date>10076 Mokosh 4, Matsday</date>
 
 The evening crowd was thick. A heavily panting young boy was pushing through it
 looking for someone. His eyes blinked quickly while filtering the faces in the

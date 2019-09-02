@@ -252,7 +252,7 @@ protect me this time, heh."
 
 # "You can't understand science"
 
-<date>10076 Mokosh 11</date>
+<date>10076 Mokosh 8, Azorsday</date>
 
 Wataru woke up from the sound of crackling electricity. There were muffled
 shouts coming from the stairwell. He looked around the darkened room he slept
