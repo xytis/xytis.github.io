@@ -6,14 +6,14 @@ date: "2019-08-01"
 
 # In the name of Science!
 
-"We should close the portal", Katrille started after the dust of their last
+"We should close the portal", Katrille spoke after the dust from their last
 fight calmed down.
 
 "Any ideas on how are we going to do that?", Wataru looked at his own blood on
 his palms. "Maybe we can leave this to the local goblins?"
 
 "I suggest we throw bricks into it until it is full!", Shinigami proclaimed,
-her suggestion bouncing off two stone like faces.
+her suggestion bouncing off two stone-like faces.
 
 "Look, I appreciate that you tried, but frankly I doubt it will work. Given it
 is leading to another plane and all that. Not that your tiny Rakdos educated
@@ -26,7 +26,7 @@ bloodwitch!", Shinigami stood her ground, though shakily at best.
 raised his trunk in agitation.
 
 "Guys, guys. Stop. I understand that there were some, _arguable_ decisions,",
-Katrille looked at Shinigami, "but we have a situation on our hands now. And if
+Katrille gazed at Shinigami, "but we have a situation on our hands now. And if
 anyone has more feasible ideas, I would like to hear them."
 
 "If you think my idea is worthless, let's ask the goblins for help.", Shinigami
@@ -73,7 +73,7 @@ mind lowering your weapons?"
 
 Wataru gestured to Shinigami to step back from the goblin.
 
-"Fiiine", Rakdos reluctantly lovered her scythe and it vanished in a burst of
+"Fiiine", Rakdos reluctantly lovered her scythe and madde it vanish in a burst of
 hellish flame.
 
 "I hope we can come to understanding that we may not overpay for your efforts,
@@ -101,7 +101,7 @@ delicately as possible.
 "What do you mean _grounded_?", Brix'es eyebrow shot up in question.
 
 "It worked as a siphon for transdimensional energies to physicaly afix the
-portal to the wall of your laboratory. This my best guess on  what had
+portal to the wall of your laboratory. This my best guess on what had
 happened.", Katrille explained.
 
 "Oh dear, so the portal is still open?", Crix stopped ordering vials on the
@@ -196,7 +196,7 @@ door.
 
 Outside the chaos had calmed down, morning was resuming it's normal pace. A
 group of Azorius lawmages were filling a report and evaluating the damage
-caused by this explosion.  Nai walked up towards the group, gently nodding to
+caused by this explosion. Nai walked up towards the group, gently nodding to
 Wataru.
 
 "Where have you been? You missed a whole bunch of action.", Wataru scolded the
@@ -349,7 +349,7 @@ sky, "The one and only force that knows it's own path!" Crowd murmured. "They
 are destroying the order!", figure gestured somewhere towards the Zonot, "They
 are sitting in their hole and planing on destroying what worked in perfect
 harmony for millenniums" Crowd murmured in agreement. "Just look at the last
-few months.  Anybody got stung by waspcrab recently?" Another murmur in
+few months. Anybody got stung by waspcrab recently?" Another murmur in
 agreement. "And now they are promising to fix it by changing what is natural
 yet again! Those fools! They are messing with forces they do not comprehend! We
 must stop the change!" Crowd began to chant "Stop the change! Stop the change!"
