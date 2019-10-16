@@ -4,19 +4,24 @@
   
   <url>
     <loc>https://www.nolife4life.org/</loc>
-    <lastmod>2019-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nolife4life.org/story/ravnica_s11/</loc>
+    <lastmod>2019-10-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.nolife4life.org/story/</loc>
+    <lastmod>2019-10-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.nolife4life.org/story/ravnica_s09/</loc>
     <lastmod>2019-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.nolife4life.org/story/</loc>
-    <lastmod>2019-08-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
