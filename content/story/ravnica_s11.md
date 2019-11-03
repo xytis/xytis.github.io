@@ -7,7 +7,7 @@ date: 2019-10-14
 <date>10076 Mokosh 9, Rakdsay</date>
 
 Morning sun breached the closed shutters and peeked inside. Nai woke up in a
-bunk bed under a heavily dented wood frame. Wataru snored blissfully above.  She
+bunk bed under a heavily dented wood frame. Wataru snored blissfully above. She
 took her belongings, stepped over carefully folded chainmail and slid down the
 stairs. The main room was empty, a hint of smoke and burned meat came from the
 kitchen. She bent down and entered through a low frame. The kitchen was packed
@@ -17,8 +17,8 @@ man was ferociously scrubbing a pan and mumbling under his nose.
 "Morning', is that our breakfast?", Nai pointed to the charred bits in the pan.
 
 "Should've been, but the cursed messenger came this morning searching for
-someone.  Spent almost half an hour explaining to him that no one by the name he
-mentioned is in the tavern.  And burned a fair deal of meat because of that.
+someone. Spent almost half an hour explaining to him that no one by the name he
+mentioned is in the tavern. And burned a fair deal of meat because of that.
 Curse those officials. And their ignorance."
 
 "Maybe I can help you?"
@@ -98,7 +98,7 @@ tonight...", Nai looked at Wataru for support. He nodded.
 I have to prepare for my act.", Shinigami was balancing on her chair.
 
 "I think we should be able to visit Iosif as well, perhaps we could get some
-more information from him. It would be nice to  know him more if we are going to
+more information from him. It would be nice to know him more if we are going to
 start an all-out war with Selesnya.", Nai laid out her plans.
 
 "Don't get me wrong, I really could use the money, but getting involved in a
@@ -239,14 +239,14 @@ Lab's door.
 "Yes?", a goblin in a clean jumpsuit stood behind the door, "Ah it is you,
 Neirius is waiting."
 
-"You  are quick!", Neirius looked at a weird contraption on his arm, "And it is
+"You are quick!", Neirius looked at a weird contraption on his arm, "And it is
 before the arranged time too. Those messengers sure are quick, are they not?"
 
 "We must have missed the messenger altogether, why did you request us though?"
 
 "We are going to the festival tonight!", Neirius stepped aside and revealed a
 rusty metal cage behind him. The bottom half of the cylinder-shaped cage was
-filled with machinery, metal tubes and tiny glass vials.  Above the intricate
+filled with machinery, metal tubes and tiny glass vials. Above the intricate
 machinery, a metal stem ended up in a dark metallic flower. A magical black and
 green mist oozed between the petals. Strands formed from the mist and then
 dissipated again in a hypnotising dance. Top of the cage ended in a thick metal
@@ -323,7 +323,7 @@ The four goblins in matching jumpsuits carefully placed the cage in an alley.
 dangerous even for The Mizzium Brothers.", one of the goblins said while rolling
 up his sleeve.
 
-"This will be fine, we can handle it from here. Thank you and  please watch over
+"This will be fine, we can handle it from here. Thank you and please watch over
 the lab while we are gone.", Neirius nodded to Wataru, who was carrying
 Shinigami on his shoulders again.
 
@@ -337,7 +337,7 @@ Wataru picked the cage under his arm.
 
 "You are late! Quickly go downstairs and dress! This whole delegation is with
 you?", a muscular man standing in front of the Gore House commanded Shinigami.
-"Quick,  you know the way!", he barked and then returned to admitting gathering
+"Quick, you know the way!", he barked and then returned to admitting gathering
 crowd inside.
 
 "Leave me in the dressing rooms, and you can go to the underpits. They are
@@ -345,7 +345,7 @@ directly under the arena.", Shinigami pointed Wataru through a door directly
 into backstage chambers.
 
 After leaving the girl to her preparations, the group went deeper in the
-underpits. Wataru placed the cage in the centre of a large square room.  The
+underpits. Wataru placed the cage in the centre of a large square room. The
 ground was covered in sand. Huge cogs were hanging on the walls.
 
 "What do you think this place is?", Katrille asked looking around.
@@ -387,30 +387,50 @@ exhaled a cone of fire.
 While the party was fighting Neirius did not lift his head from the device, he
 just kept mumbling "More, more, yes, more!". Even when Wataru blasted an ogre
 back into the tunnel it came from. Even when the whole room jerked and started
-raising through the now opening ceiling. Even when a wet blob of feathers
-plopped next to his feet. He kept tunning the device, seemingly undisturbed by
-all the chaos.
+raising through the now opening ceiling. Even when a wet feathered blob plopped
+next to his feet. He kept tunning the device, seemingly undisturbed by all the
+chaos.
 
-As the ceiling opened and the room they were standing in lifted up from the
-underpits, music stoped. The arena was full of people. Lights were concentrated
+The ceiling opened and the room they were standing in lifted up from the
+underpits. The crowd parted as metal plates moved under their feet. Loud music
+died out slowly. Hackrobats stopped juggling for a moment. Lights concentrated
 on the stage, where, sitting on a simple stool, Shinigami lifted her flute to
 her lips. Her tune started softly. Her seemingly fragile frame was wrapped in a
 light white dress. She stood up and effortlessly glided forward. Her feet lifted
-above the ground and she flew. Her figure rose up together with her music.
-Suddenly she stopped rising. A moment of silence befell the arena.
+above the ground and she flew. Her figure rose up together with her music. She
+soared across the arena, her white dress flailing in the wind. As her music
+builds up the tension she climbed higher and higher in circles above the stage.
+Suddenly her song stopped. Flames burst out all around the stage. Drums and
+other instruments started playing loudly, forcing the crowd to gasp. Shinigami
+tore her dress from her, revealing a red leather outfit which barely covered her
+body. She landed on a chain affixed above the crowd. The music soared over the
+audience as they watched Shinigami perform somersaults on the chain. More flames
+shot from the spiked decorations around the stage. Shinigami jumped off the
+chain. Crowd gasped. She spun quickly and stopped moments before hitting the
+ground. An invisible rope stopped her fall. She gracefully landed on her feet.
 
-Flames burst out all around the stage. Drums and other instruments started
-playing loudly, forcing the crowd to gasp. Shinigami tore her dress from her,
-revealing a red leather outfit which barely covered her body. She walked on a
-chain affixed above the crowd. The music soared over the audience as they
-watched Shinigami perform somersaults on the chain. More flames shot from the
-spiked decorations around the stage. Shinigami jumped off the rope. Crowd
-gasped. She spun quickly and stopped centimetres before hitting the ground. An
-invisible rope stopped her fall. She gracefully landed on her feet and summoned
-her scythe. With a swing of it, blood spilt on the first few rows of gaping
-observers.
+With flute back in her hands, she played Azorius march as two demons came in
+from the far side of the scene carrying a pig adorned in Azorius uniform. They
+marched around the perimeter of the scene making faces and squeaking the pig.
+Their walk was followed by laughter from the crowd.
+
+"An opening toast to the _authorities_!", Shinigami raised her hand above the
+pig. A scythe appeared in her hand and sliced down in a quick motion. Blood
+spilt from the cleaved head covering the pale girl.
+
+Demons turned the pig around and squeezed the lifeless corpse to gush out
+another stream of warm blood on closest spectators. A cheer came from the crowd.
+
+"Enjoy yourselves and the spectacles that you are about to see", Shinigami
+raised her hands and the music washed over the arena. Flames shot from the edges
+of the scene. At least four acrobats jumped on the lines suspended above the
+arena and juggled burning swords above the crowd.
+
+Spikewheel acrobats came rolling through the crowd, lucky ones managed to move
+out of the way, unlucky ones were rolled over. Their shouts drowned in the loud
+music coming from all sides.
 
 "Welcome to my act", Shinigami bowed to the party members, who were now standing
 in the very centre of the arena.
 
-
+<!-- vim: set wrap linebreak nolist: -->
