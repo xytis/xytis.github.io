@@ -4,7 +4,7 @@ layout: story
 date: 2019-10-29
 ---
 
-<date>10076 Mokosh 9, Rakdsay</date>
+# Raising from the underpits
 
 Platform stopped moving as it reached the scene.
 
@@ -187,7 +187,7 @@ Nai's abdomen, Wataru, holding Nai in place and Najneth, the lusty demon in the
 corner of the room, painfully stroking marks of Katrille's magic. Something
 clicked in her mind. "Srztak, nurtlr skratgran, Najneth!", she grunted in
 Abyssal. "Ech, fine, have it your way, I was just a little bored, that's all."
-Najneth's voice intruded into Shinigami's mind.
+Najneth's voice intruded Shinigami's mind.
 
 Demon turned his eyes back to Rozhe, "Your friend thinks you should stop
 fighting and make out. Be a dear and kiss her." Rozhe's arms dropped the
