@@ -371,9 +371,47 @@ innocent look changed. "That is all I can give you. Out you go now!"
 
 ...
 
-"You know, that woman looked fishy even for me.", Shinigami said after long
+"You know, that woman looked fishy even for me.", Shinigami said after a long
 walk in silence.
 
 ---
+
+Party came back to Neirius lab and delivered their results. Neirius was pleased
+and gave them a weekend off.
+
+...
+
+"I have to do an errand before the evening.", Nai stood up from the table.
+
+"Book related?", Wataru asked.
+
+"Yes. If you don't mind I will go alone. It is mandatory.", she picked her bag and left.
+
+"I need some air. The music is horrible in this inn.", Shinigami stood up too and followed
+Nai through the door. She trailed the blue cloaked girl for a while, but after few turns
+rogue disappeared from her vision. She continued to walk forward in hope of noticing her comrades
+silhouette but she had to return to the inn disappointed.
+
+Meanwhile Wataru counted his money and stood up to pay a quick visit to Orzhov bank.
+
+Katrille and Rozhe stayed in the inn. Exchanging only a few phrases here and
+there. Nai returned moments after Shinigami.
+
+"So, the book has a forged entry. I asked my contact to investigate it and to
+alert us if anything bad is going to happen to Neirius. He could not promise
+much, but at least we will have a head start if trouble comes our way."
+
+"Who is this contact of yours?", Rozhe asked curiously.
+
+"Someone I would not want to mess with.", Nai cut the conversation.
+
+"You don't have to be so harsh... Keep your secrets, fine.", Rozhe lifted her
+mug.
+
+"Any ideas what we want to do now?", Katrille tumbled her Simic communicator on the table.
+
+"I am still very much in debt, so any work will do for me.", Wataru chugged a big gulp of beer.
+
+...
 
 <!-- vim: set wrap linebreak nolist: -->
