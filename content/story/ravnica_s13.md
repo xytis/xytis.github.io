@@ -4,6 +4,8 @@ layout: story
 date: 2019-11-11
 ---
 
+<date>10076 Mokosh 10, Raziday</date>
+
 Shinigami opens her eyes in the dark room above Neirius laboratory. There are
 no unusual sounds today. Only peaceful breathing of other group members. She
 looks around. Wataru is sleeping in the corner, his long inhales are followed

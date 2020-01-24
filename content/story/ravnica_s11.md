@@ -149,7 +149,7 @@ the ground and jumped back up. A water column formed out of a puddle under her
 feet. It shot a slimy outgrowth directly at Nai's torso, she took the blow and
 bent over from the pain.
 
-Shinigami leapt on her feet, standing on loxodon's shoulders, somersaulted
+Shinigami leapt on her feet, still standing on loxodon's shoulders, somersaulted
 between the monster and the boy and slammed her scythe into the formless pillar.
 
 A face formed out of the slimy substance. A mouth opened unnaturally wide and
@@ -236,7 +236,7 @@ to find, she placed it her bag, under other equipment she had.
 After leaving Jack in Matilda's Orphanage, the party came to knock on Neirius
 Lab's door.
 
-"Yes?", a goblin in a clean jumpsuit stood behind the door, "Ah it is you,
+"Yes?", a goblin in a clean jumpsuit stood behind the door, "Ah!
 Neirius is waiting."
 
 "You are quick!", Neirius looked at a weird contraption on his arm, "And it is

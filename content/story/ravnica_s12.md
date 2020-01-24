@@ -30,7 +30,7 @@ not lose her footing. She swung at the closest madmen running at them, her
 scythe left a slash of fresh blood on the cage below them. The man leaped forward
 and clawed with his bare hands at Wataru. His dirty fingernails left deep
 scratch marks on Loxodon's trunk. Wataru pushed his hammer into the creature's
-abdomen. He felt something cracking under the weight of his weapon.  The man
+abdomen. He felt something cracking under the weight of his weapon. The man
 collapsed on the cage floor.
 
 On the other side, Nai and Katrille aimed bow and magic at another mad
@@ -81,8 +81,8 @@ uniform. Loxodon landed a firm blow on one of them, sending a limp body down.
 Meanwhile, two jugglers watched a play of shadows in the fog. Four columns of
 flame shot upwards from under the cage, illuminating the figures in the cloud.
 They aimed and threw two burning blades at the largest of them. Wataru shouted
-in pain as both blades sunk through his armour. His knees felt weak.  He
-stumbled forward trying to hold his balance, but the pain was too great.  The
+in pain as both blades sunk through his armour. His knees felt weak. He
+stumbled forward trying to hold his balance, but the pain was too great. The
 world spun in a quick spiral and he fell on the ground.
 
 On the other side of the fog Katrille kept shooting the blade jugglers with her
@@ -107,7 +107,7 @@ After a few more seconds the cage was back in the bowels of the underpits.
 Ceiling plates closed above them and the deafening sound of the music stopped.
 Only a distant rumbling and muffled vocals remained.
 
-Wataru wished the fog away. They stood surrounded by a bunch of corpses.  Few of
+Wataru wished the fog away. They stood surrounded by a bunch of corpses. Few of
 them wore Rakdos apparel, but most of them seemed like common folk.
 
 "We need to get out of here", Nai nervously looked at the dead. "I don't think
@@ -139,9 +139,9 @@ next".
 Wataru to lift the cage under his arm.
 
 They walked back to Rakdos dressing rooms. They were covered in shadows, a
-figure stood in the corner and was picking his teeth with something sharp.  It
+figure stood in the corner and was picking his teeth with something sharp. It
 was a demon, with wings neatly tucked behind his back. His masculine figure was
-shining in the dim torchlight. His skin was covered in some sort of oil.  He
+shining in the dim torchlight. His skin was covered in some sort of oil. He
 looked at the party and smiled with his perfect teeth.
 
 Katrille's eyes froze to his gaze. She heard a voice in her mind. A seductive
@@ -169,7 +169,7 @@ ground binding Nai's body. She grunted and resisted, but the bondages held.
 "What has gotten into you?", Wataru held his distance as he cast another spell.
 
 Green sprinkles manifested on top of motionless Rozhe and dug into her flesh.
-She gasped for air. "What...", she rolled over and slid away from Nai.  Suddenly
+She gasped for air. "What...", she rolled over and slid away from Nai. Suddenly
 she heard this voice in the back of her head. "My child, don't let her get away
 with this. You want her dead. Stand up and slice her open!". Rozhe's hands moved
 on their own. She stood up and moved in for the kill. Her dagger pushed in Nai's
@@ -248,6 +248,5 @@ your project?"
 part, I don't need it as much as you do."
 
 "Thank you!", Wataru nodded. "I will remember this."
-
 
 <!-- vim: set wrap linebreak nolist: -->
