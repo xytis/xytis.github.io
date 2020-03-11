@@ -4,7 +4,7 @@
     <div class="content">
       <div class="page-heading">Latest</div>
       <ul>
-        {{ range where (where (.Data.Pages.ByPublishDate).Reverse "PublishDate" "gt" (now.AddDate -1 0 0) ) ".Section" "!=" "hidden"}}
+        {{ range where (where (.Site.Pages.ByPublishDate).Reverse "PublishDate" "gt" (now.AddDate 0 -6 0) ) ".Section" "!=" "hidden"}}
         {{ partial "li.html" . }}
         {{ end }}
       </ul>
@@ -12,4 +12,3 @@
   </div>
 </section>
 {{ partial "footer.html" . }}
-

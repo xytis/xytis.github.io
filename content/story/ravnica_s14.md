@@ -252,7 +252,7 @@ Azorius, it would help.", Katrille suggested.
 "Ok, it is decided, we go to New Prahv in the morning.", Nai decided for the
 whole group. Others did not seem to protest.
 
-...
+<date>10076 Mokosh 11, Matsday</date>
 
 Three triangular tower-like structures forming the New Prahv stood proudly in
 the morning sun. Soothing mist from a decorative waterfall pouring out of one of
