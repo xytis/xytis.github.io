@@ -110,54 +110,49 @@
             </div>
             <div class="markdown">
                 <p>Every now and then I catch myself in such situation:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">enum</span> Alignment {
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">enum</span> <span style="font-weight:bold">Alignment</span> {
   Left, Center, Right, Justify,
 };
 
-<span style="font-weight:bold">enum</span> Anchor {
+<span style="font-weight:bold">enum</span> <span style="font-weight:bold">Anchor</span> {
   Top, Right, Bottom, Left,
 };
 
 <span style="">void</span> SetAnchor(byte anchor);
 <span style="">void</span> SetAlignment(byte alignment);
-</code></pre></div>
-<p>This just begs for errors. So what can we do here? Obvious answer &ndash; lets make a class, with overloaded <code>operator|</code> and <em>voilia</em>, we just created a type safe flag implementation.
+</code></pre></div><p>This just begs for errors. So what can we do here? Obvious answer &ndash; lets make a class, with overloaded <code>operator|</code> and <em>voilia</em>, we just created a type safe flag implementation.
 This time I wanted to do something different, in a way, that performance of these flags would match (in some extent) natural binary operations.</p>
-
 <p>So the goals for today:</p>
-
 <ul>
-<li><p>Syntax:</p>
-
+<li>
+<p>Syntax:</p>
 <p>{% codeblock lang:cpp %}
 auto alignment = Alignment::Justify | Alignment::Right;
-SetAnchor(Anchor::Top | Anchor::Right); {% endcodeblock %}</p></li>
-
-<li><p>Speed:</p>
-
-<p>Should be resolved during compile time most of the time and with the same speed as std::bitset when performing in runtime.</p></li>
-
-<li><p>Ease of defining:</p>
-
-<p>I liked the way <a href="http://molecularmusings.wordpress.com/2011/08/23/flags-on-steroids">Molecular</a> defined macros for their flag creation, so I shall do the same.</p></li>
+SetAnchor(Anchor::Top | Anchor::Right); {% endcodeblock %}</p>
+</li>
+<li>
+<p>Speed:</p>
+<p>Should be resolved during compile time most of the time and with the same speed as std::bitset when performing in runtime.</p>
+</li>
+<li>
+<p>Ease of defining:</p>
+<p>I liked the way <a href="http://molecularmusings.wordpress.com/2011/08/23/flags-on-steroids">Molecular</a> defined macros for their flag creation, so I shall do the same.</p>
+</li>
 </ul>
-
 <p>Note:
-  Code for this post is stored at <a href="https://github.com/xytis/mad-flag">GitHub</a></p>
-
+Code for this post is stored at <a href="https://github.com/xytis/mad-flag">GitHub</a></p>
 <p>Since I want compile time evaluation, I must somehow store the expressions <code>a | b | c</code> as types. Naturally this can be achieved using lists: <code>a | (b | c)</code>, where <code>b | c</code> creates a compound type.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">  <span style="font-weight:bold">template</span>&lt;<span style="font-weight:bold">typename</span> T, size_t pos, <span style="">bool</span> state = true&gt;
-  <span style="font-weight:bold">struct</span> flag {
+  <span style="font-weight:bold">struct</span> <span style="font-weight:bold">flag</span> {
     <span style="font-weight:bold">constexpr</span> flag() {}
   };
 
   <span style="font-weight:bold">template</span>&lt;<span style="font-weight:bold">typename</span> T, <span style="font-weight:bold">typename</span> lhs_t, <span style="font-weight:bold">typename</span> rhs_t&gt;
-  <span style="font-weight:bold">struct</span> flag_group {
+  <span style="font-weight:bold">struct</span> <span style="font-weight:bold">flag_group</span> {
     lhs_t &amp; lhs;
     rhs_t &amp; rhs;
   };
-</code></pre></div>
-<p>These types can be nested using these operations:</p>
+</code></pre></div><p>These types can be nested using these operations:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">template</span>&lt;...&gt;
 <span style="font-weight:bold">constexpr</span> <span style="font-weight:bold">auto</span> <span style="font-weight:bold">operator</span> | (left_flag_t&lt;T, ...&gt; lhs, right_flag_t&lt;U, ...&gt; rhs) -&gt; flag_group&lt;T, <span style="font-weight:bold">decltype</span>(lhs), <span style="font-weight:bold">decltype</span>(rhs)&gt; {
   <span style="font-weight:bold">static_assert</span>(std::is_same&lt;T,U&gt;::value, <span style="font-style:italic">&#34;Flag type missmatch!&#34;</span>);
@@ -175,8 +170,7 @@ SetAnchor(Anchor::Top | Anchor::Right); {% endcodeblock %}</p></li>
   <span style="font-weight:bold">static_assert</span>(std::is_same&lt;T,U&gt;::value, <span style="font-style:italic">&#34;Flag type missmatch!&#34;</span>);
   <span style="font-weight:bold">return</span> {lhs, rhs};
 }
-</code></pre></div>
-<p>Resulting object from operation <code>a | b | c</code> contains all expression flags, carefully nested in a compile time defined tree. Now how do we use them in orderly fashion?</p>
+</code></pre></div><p>Resulting object from operation <code>a | b | c</code> contains all expression flags, carefully nested in a compile time defined tree. Now how do we use them in orderly fashion?</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">namespace</span> Anchor {
     <span style="font-weight:bold">typedef</span> <span style="font-weight:bold">struct</span>{} _guard;
     <span style="font-weight:bold">typedef</span> Flags::field&lt;_guard, 4&gt; State;
@@ -185,10 +179,8 @@ SetAnchor(Anchor::Top | Anchor::Right); {% endcodeblock %}</p></li>
     <span style="font-weight:bold">constexpr</span> Flags::flag&lt;_guard, 2&gt; Bottom;
     <span style="font-weight:bold">constexpr</span> Flags::flag&lt;_guard, 3&gt; Left;
 }
-</code></pre></div>
-<p>Here the namespace serves as a syntactic container for flags and for magical guard struct. The type of the struct is unique (as long as there are only a single definition of a namespace named Anchor with an empty struct) and can be used by compiler while resolving templates to imply type safety on the flags.
+</code></pre></div><p>Here the namespace serves as a syntactic container for flags and for magical guard struct. The type of the struct is unique (as long as there are only a single definition of a namespace named Anchor with an empty struct) and can be used by compiler while resolving templates to imply type safety on the flags.
 State typedef in the namespace is used to create flag containers.</p>
-
 <p>After using the same macro magic as in Molecular engine, flags can be used like this:</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">FLAGS(PlayerState, active, idle, damaged, jumping);
 

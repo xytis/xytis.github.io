@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://www.nolife4life.org/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.nolife4life.org/story/ravnica_s14/</loc>
+    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.nolife4life.org/story/</loc>
+    <lastmod>2020-02-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.nolife4life.org/story/ravnica_s13/</loc>
     <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.nolife4life.org/story/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -42,7 +45,6 @@
   <url>
     <loc>https://www.nolife4life.org/hidden/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -96,26 +98,33 @@
   </url>
   
   <url>
-    <loc>https://www.nolife4life.org/fixed/</loc>
+    <loc>https://www.nolife4life.org/about/</loc>
     <lastmod>2016-02-26T00:31:14+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.nolife4life.org/about/</loc>
+    <loc>https://www.nolife4life.org/fixed/</loc>
     <lastmod>2016-02-26T00:31:14+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.nolife4life.org/blog/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.nolife4life.org/categories/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nolife4life.org/categories/cpp/</loc>
+    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.nolife4life.org/categories/cpp11/</loc>
+    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
   </url>
   
   <url>
@@ -124,21 +133,8 @@
   </url>
   
   <url>
-    <loc>https://www.nolife4life.org/categories/cpp/</loc>
-    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nolife4life.org/categories/cpp11/</loc>
-    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.nolife4life.org/categories/templates/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -148,7 +144,6 @@
   
   <url>
     <loc>https://www.nolife4life.org/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
