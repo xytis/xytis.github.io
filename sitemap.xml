@@ -1,154 +1,97 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://www.nolife4life.org/</loc>
-    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.nolife4life.org/story/ravnica_s16/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.nolife4life.org/story/</loc>
+    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s15/</loc>
     <lastmod>2020-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.nolife4life.org/story/</loc>
-    <lastmod>2020-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s14/</loc>
     <lastmod>2020-02-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s13/</loc>
     <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s12/</loc>
     <lastmod>2019-10-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s11/</loc>
     <lastmod>2019-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s09/</loc>
     <lastmod>2019-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/hidden/ylva/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/hidden/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s08/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/hidden/case_76-7712/</loc>
     <lastmod>2019-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/hidden/elf_genocide/</loc>
     <lastmod>2019-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s07/</loc>
     <lastmod>2019-07-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s06/</loc>
     <lastmod>2019-05-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s05/</loc>
     <lastmod>2019-05-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s04/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s03/</loc>
     <lastmod>2019-03-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s02/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s01/</loc>
     <lastmod>2019-03-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/about/</loc>
     <lastmod>2016-02-26T00:31:14+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/fixed/</loc>
     <lastmod>2016-02-26T00:31:14+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/blog/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/categories/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/categories/cpp/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/categories/cpp11/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/blog/fun-with-flags/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/categories/templates/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/blog/tackling-functions/</loc>
     <lastmod>2013-08-26T21:53:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.nolife4life.org/tags/</loc>
   </url>
-  
 </urlset>

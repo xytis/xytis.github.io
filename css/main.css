@@ -184,14 +184,14 @@ section.header nav ul {
   display: -ms-inline-flex;
   display: inline-flex;
 }
-section.header nav ul a {
+section.header nav ul li {
   margin-left: 6px;
   margin-right: 6px;
 }
-section.header nav ul a:first-child {
+section.header nav ul li:first-child {
   margin-left: 0;
 }
-section.header nav ul a:last-child {
+section.header nav ul li:last-child {
   margin-right: 0;
 }
 section.header nav ul li {
@@ -697,4 +697,3 @@ section.main .content .markdown figure figcaption p {
   font-style: italic;
   font-size: smaller;
 }
-
