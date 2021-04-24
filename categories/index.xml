@@ -6,7 +6,34 @@
     <description>Recent content in Categories on Ranting about fantasies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 11 Oct 2013 12:00:00 +0200</lastBuildDate><atom:link href="https://www.nolife4life.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 16:59:35 +0300</lastBuildDate><atom:link href="https://www.nolife4life.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ambassador</title>
+      <link>https://www.nolife4life.org/categories/ambassador/</link>
+      <pubDate>Fri, 23 Apr 2021 16:59:35 +0300</pubDate>
+      
+      <guid>https://www.nolife4life.org/categories/ambassador/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://www.nolife4life.org/categories/aws/</link>
+      <pubDate>Fri, 23 Apr 2021 16:59:35 +0300</pubDate>
+      
+      <guid>https://www.nolife4life.org/categories/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>https://www.nolife4life.org/categories/terraform/</link>
+      <pubDate>Fri, 23 Apr 2021 16:59:35 +0300</pubDate>
+      
+      <guid>https://www.nolife4life.org/categories/terraform/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>cpp</title>
       <link>https://www.nolife4life.org/categories/cpp/</link>

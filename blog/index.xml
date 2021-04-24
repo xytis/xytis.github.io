@@ -6,7 +6,20 @@
     <description>Recent content in Blog on Ranting about fantasies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 11 Oct 2013 12:00:00 +0200</lastBuildDate><atom:link href="https://www.nolife4life.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Apr 2021 16:59:35 +0300</lastBuildDate><atom:link href="https://www.nolife4life.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proper Ambassador Behind Cloudfront</title>
+      <link>https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/</link>
+      <pubDate>Fri, 23 Apr 2021 16:59:35 +0300</pubDate>
+      
+      <guid>https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/</guid>
+      <description>Quick walkthrough on deploying Ambassador (or any other Ingress Controller) behind WAF filtered CloudFront distribution.
+Requirements:
+ EKS cluster, with proper configuration. Helm deployed Ambassador. Working Terraform installation.  Standard way of setuping Load Balancer backed CloudFront Distribution looks like this:
+ This setup works just fine, if you are not concerned about traffic hitting your Load Balancer directly.
+Here you can find terraform files that generate CloudFront distribution for listed Domains.</description>
+    </item>
+    
     <item>
       <title>Fun with flags</title>
       <link>https://www.nolife4life.org/blog/fun-with-flags/</link>

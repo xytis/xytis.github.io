@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Don&#39;t panic">
+
+<base href="https://www.nolife4life.org/">
+<title>
+
+
+     Proper Ambassador Behind Cloudfront 
+
+</title>
+<link rel="canonical" href="https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/">
+
+
+<script type="text/javascript">
+    var baseURL = 'https:\/\/www.nolife4life.org\/';
+    var host = baseURL.substring(0, baseURL.length - 1).replace(/\//g, '');
+    if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
+        window.location.protocol = 'https:';
+    }
+</script>
+
+
+
+<link rel="stylesheet" href="https://www.nolife4life.org/css/reset.css">
+<link rel="stylesheet" href="https://www.nolife4life.org/css/syntax.css">
+<link rel="stylesheet" href="https://www.nolife4life.org/css/main.css">
+
+
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://www.nolife4life.org/img/favicon.ico"
+
+>
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            <a href="https://www.nolife4life.org/"><div class="name">xytis</div></a>
+            <nav>
+                <ul>
+                  <li><a href="https://www.nolife4life.org/blog/">Blog</a></li>
+                  <li><a href="https://www.nolife4life.org/story/">Stories</a></li>
+                  <li><a href="https://www.nolife4life.org/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+            <a href="https://github.com/xytis" target="_blank">
+                <i class="icon ion-social-github"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Proper Ambassador Behind Cloudfront
+
+</div>
+
+                    <div class="initials"><a href="https://www.nolife4life.org/"></a></div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="Fri Apr 23 2021 16:59:35 EEST">Apr 23, 2021</div>
+                    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                <p>Quick walkthrough on deploying <a href="https://www.getambassador.io">Ambassador</a> (or
+any other <a href="https://kubernetes.github.io/ingress-nginx/">Ingress Controller</a>) behind WAF filtered
+<a href="https://aws.amazon.com/cloudfront/">CloudFront</a> distribution.</p>
+<p>Requirements:</p>
+<ol>
+<li>EKS cluster, with <a href="https://docs.aws.amazon.com/eks/latest/userguide/load-balancing.html">proper configuration</a>.</li>
+<li><a href="https://www.getambassador.io/docs/edge-stack/latest/topics/install/helm/">Helm deployed Ambassador</a>.</li>
+<li>Working <a href="https://www.terraform.io">Terraform</a> installation.</li>
+</ol>
+<p>Standard way of setuping Load Balancer backed CloudFront Distribution looks like this:</p>
+
+
+
+
+<div class="img-container">
+    <img src="https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/images/design_hud49ab4c10962313766375a0c5ea1cae1_179468_0x300_resize_box_2.png" alt="Standard AWS CloudFront Origin access">
+</div>
+
+<p>This setup works just fine, if you are not concerned about traffic hitting your
+Load Balancer directly.</p>
+<p><a href="https://github.com/xytis/proper-ambassador-behind-cloudfront/tree/cloudfront-to-exposed-ambassador">Here</a>
+you can find terraform files that generate CloudFront distribution for listed
+Domains. In addition to that it allows switching between direct access and
+CloudFront. Check <code>locals.tf</code> file for more details.</p>
+<p>Why should you be concerned if your Load Balancer can be reached directly?
+Mainly if you deploy WAF on your CloudFront and do some access control through WAF configuration.
+Obviously that is meaningless if there is a way to sidestep your protection.</p>
+<p>So what are the available options to remove this vulnerability?</p>
+<ul>
+<li>CloudFront <a href="https://stackoverflow.com/questions/55195852/aws-cloudfront-for-internal-elastic-load-balancer-origin">does not work with Internal Load Balancers as Origins</a>.</li>
+<li>CloudFront <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/LocationsOfEdgeServers.html">has a dinamic list of IP&rsquo;s, which change randomly</a>. So static security group is not an option.</li>
+<li>Network Load Balancer (which is preferred way of setuping Ambassador) <a href="https://aws.amazon.com/premiumsupport/knowledge-center/security-group-load-balancer/">does not support Security Group attachment directly</a>.</li>
+<li>EKS cluster is composed from Autoscaling Node Pool&rsquo;s which may change dynamicaly.</li>
+</ul>
+<p>Given that, we must:</p>
+<ul>
+<li>Use Internet facing Network Load Balancer and setup Security Group on backends.</li>
+<li>Bind Ambassador to static Host Ports.</li>
+<li>Setup mechanism for keeping Security Group up to date with CloudFront IP&rsquo;s.</li>
+<li>Setup mechanism for keeping Security Group attached to all EKS Node Pool instances.</li>
+</ul>
+<p>Luckily, AWS exposes IP address changes via SNS topic, so we can bind a lambda
+to update Security Group with changed IP&rsquo;s. Also, we can publish Autoscaling
+Group changes to our topic. So, we need a few lambdas and all should fall into place:</p>
+
+
+<div class="img-container">
+    <img src="https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/images/lambdas.png" alt="Lambdas setup">
+</div>
+
+<p><a href="https://github.com/xytis/proper-ambassador-behind-cloudfront/tree/lambdas">Here</a>
+you can find terraform files and lambda sources. Check <code>locals.tf</code> file for more details.</p>
+<p>End result is an automaticaly applied dynamic security groups which allow only
+trafic from CloudFront to end up in your nodes.</p>
+
+
+<div class="img-container">
+    <img src="https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/images/end-result.png" alt="End result">
+</div>
+
+
+                <br>
+                <p><a href="https://www.nolife4life.org/blog/">Back to posts</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-43712305-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+</body>
+</html>
+

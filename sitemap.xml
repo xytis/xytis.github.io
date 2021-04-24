@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.nolife4life.org/categories/ambassador/</loc>
+    <lastmod>2021-04-23T16:59:35+03:00</lastmod>
+  </url><url>
+    <loc>https://www.nolife4life.org/categories/aws/</loc>
+    <lastmod>2021-04-23T16:59:35+03:00</lastmod>
+  </url><url>
+    <loc>https://www.nolife4life.org/blog/</loc>
+    <lastmod>2021-04-23T16:59:35+03:00</lastmod>
+  </url><url>
+    <loc>https://www.nolife4life.org/categories/</loc>
+    <lastmod>2021-04-23T16:59:35+03:00</lastmod>
+  </url><url>
+    <loc>https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/</loc>
+    <lastmod>2021-04-23T16:59:35+03:00</lastmod>
+  </url><url>
     <loc>https://www.nolife4life.org/</loc>
-    <lastmod>2020-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-23T16:59:35+03:00</lastmod>
+  </url><url>
+    <loc>https://www.nolife4life.org/categories/terraform/</loc>
+    <lastmod>2021-04-23T16:59:35+03:00</lastmod>
   </url><url>
     <loc>https://www.nolife4life.org/story/ravnica_s16/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
@@ -70,12 +88,6 @@
   </url><url>
     <loc>https://www.nolife4life.org/fixed/</loc>
     <lastmod>2016-02-26T00:31:14+02:00</lastmod>
-  </url><url>
-    <loc>https://www.nolife4life.org/blog/</loc>
-    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://www.nolife4life.org/categories/</loc>
-    <lastmod>2013-10-11T12:00:00+02:00</lastmod>
   </url><url>
     <loc>https://www.nolife4life.org/categories/cpp/</loc>
     <lastmod>2013-10-11T12:00:00+02:00</lastmod>
