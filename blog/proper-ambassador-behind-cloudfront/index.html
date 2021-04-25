@@ -151,7 +151,7 @@ you can find terraform files and lambda sources. Check <code>locals.tf</code> fi
 <p>The end result is an automatically applied dynamic security groups that allow only
 traffic from CloudFront to end up in your nodes.</p>
 <p>Once you have applied all terraform files and have verified that EKS nodes have correct
-Security Group rules, redeployed Ambassador with the following:</p>
+Security Group rules, redeploy Ambassador with the following:</p>
 <pre><code>service:
   loadBalancerSourceRanges:
     - 127.0.0.1/32
