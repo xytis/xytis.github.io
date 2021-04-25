@@ -113,10 +113,9 @@ This time I wanted to do something different, in a way, that performance of thes
 <ul>
 <li>
 <p>Syntax:</p>
-<p>{% codeblock lang:cpp %}
-auto alignment = Alignment::Justify | Alignment::Right;
-SetAnchor(Anchor::Top | Anchor::Right); {% endcodeblock %}</p>
-</li>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="font-weight:bold">auto</span> alignment = Alignment::Justify | Alignment::Right;
+SetAnchor(Anchor::Top | Anchor::Right);
+</code></pre></div></li>
 <li>
 <p>Speed:</p>
 <p>Should be resolved during compile time most of the time and with the same speed as std::bitset when performing in runtime.</p>
@@ -178,7 +177,7 @@ State typedef in the namespace is used to create flag containers.</p>
 
     state |= active | jumping | idle;
     std::cout &lt;&lt; ToString(state) &lt;&lt; std::endl;
-        
+
     <span style="font-weight:bold">auto</span> argument = damaged | !jumping;
     state |= argument;
     std::cout &lt;&lt; ToString(state) &lt;&lt; std::endl;
