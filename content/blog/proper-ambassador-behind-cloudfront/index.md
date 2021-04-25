@@ -58,7 +58,7 @@ The end result is an automatically applied dynamic security groups that allow on
 traffic from CloudFront to end up in your nodes.
 
 Once you have applied all terraform files and have verified that EKS nodes have correct
-Security Group rules, redeployed Ambassador with the following:
+Security Group rules, redeploy Ambassador with the following:
 ```
 service:
   loadBalancerSourceRanges:
