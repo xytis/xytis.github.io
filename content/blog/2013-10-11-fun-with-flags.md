@@ -30,9 +30,10 @@ So the goals for today:
 
 *   Syntax:
 
-    {% codeblock lang:cpp %}
+    ``` cpp
     auto alignment = Alignment::Justify | Alignment::Right;
-    SetAnchor(Anchor::Top | Anchor::Right); {% endcodeblock %}
+    SetAnchor(Anchor::Top | Anchor::Right);
+    ```
 
 *   Speed:
 
@@ -108,7 +109,7 @@ int main ()
 
     state |= active | jumping | idle;
     std::cout << ToString(state) << std::endl;
-        
+
     auto argument = damaged | !jumping;
     state |= argument;
     std::cout << ToString(state) << std::endl;
