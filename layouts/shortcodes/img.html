@@ -1,0 +1,7 @@
+{{ $image := .Page.Resources.GetMatch (.Get "src") }}
+{{ if (.Get "size") }}
+{{ $image = $image.Resize (.Get "size")}}
+{{ end }}
+<div class="img-container">
+    <img src="{{ $image.RelPermalink }}" {{ if (.Get "alt")}}alt="{{(.Get "alt")}}"{{ end }}>
+</div>

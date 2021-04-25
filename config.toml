@@ -16,6 +16,11 @@ pluralizelisttitles = false
 
 googleAnalytics = "UA-43712305-1"
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
 [permalinks]
 fixed = ":title/"
 blog = "blog/:slug/"

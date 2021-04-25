@@ -631,6 +631,14 @@ section.main .content .markdown ul {
 section.main .content .markdown li {
   list-style-type: none;
 }
+section.main .content .markdown ol li {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+section.main .content .markdown ul li {
+  list-style-position: inside;
+  list-style-type: circle;
+}
 section.main .content .markdown em {
   font-style: italic;
 }
@@ -696,4 +704,8 @@ section.main .content .markdown figure {
 section.main .content .markdown figure figcaption p {
   font-style: italic;
   font-size: smaller;
+}
+
+section.main .content .markdown div.img-container {
+  text-align: center;
 }
