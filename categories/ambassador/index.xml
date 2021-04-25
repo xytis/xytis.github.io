@@ -13,10 +13,10 @@
       <pubDate>Fri, 23 Apr 2021 16:59:35 +0300</pubDate>
       
       <guid>https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/</guid>
-      <description>Quick walkthrough on deploying Ambassador (or any other Ingress Controller) behind WAF filtered CloudFront distribution.
+      <description>A quick walkthrough on deploying Ambassador (or any other Ingress Controller) behind WAF filtered CloudFront distribution.
 Requirements:
  EKS cluster, with proper configuration. Helm deployed Ambassador. Working Terraform installation.  Standard way of setuping Load Balancer backed CloudFront Distribution looks like this:
- This setup works just fine, if you are not concerned about traffic hitting your Load Balancer directly.
+ This setup works just fine if you are not concerned about traffic hitting your Load Balancer directly.
 Here you can find terraform files that generate CloudFront distribution for listed Domains.</description>
     </item>
     

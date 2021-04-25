@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="markdown">
-                <p>Quick walkthrough on deploying <a href="https://www.getambassador.io">Ambassador</a> (or
+                <p>A quick walkthrough on deploying <a href="https://www.getambassador.io">Ambassador</a> (or
 any other <a href="https://kubernetes.github.io/ingress-nginx/">Ingress Controller</a>) behind WAF filtered
 <a href="https://aws.amazon.com/cloudfront/">CloudFront</a> distribution.</p>
 <p>Requirements:</p>
@@ -114,31 +114,31 @@ any other <a href="https://kubernetes.github.io/ingress-nginx/">Ingress Controll
     <img src="https://www.nolife4life.org/blog/proper-ambassador-behind-cloudfront/images/design_hud49ab4c10962313766375a0c5ea1cae1_179468_0x300_resize_box_2.png" alt="Standard AWS CloudFront Origin access">
 </div>
 
-<p>This setup works just fine, if you are not concerned about traffic hitting your
+<p>This setup works just fine if you are not concerned about traffic hitting your
 Load Balancer directly.</p>
 <p><a href="https://github.com/xytis/proper-ambassador-behind-cloudfront/tree/cloudfront-to-exposed-ambassador">Here</a>
 you can find terraform files that generate CloudFront distribution for listed
-Domains. In addition to that it allows switching between direct access and
+Domains. In addition to that, it allows switching between direct access and
 CloudFront. Check <code>locals.tf</code> file for more details.</p>
 <p>Why should you be concerned if your Load Balancer can be reached directly?
 Mainly if you deploy WAF on your CloudFront and do some access control through WAF configuration.
-Obviously that is meaningless if there is a way to sidestep your protection.</p>
+Obviously, that is meaningless if there is a way to sidestep your protection.</p>
 <p>So what are the available options to remove this vulnerability?</p>
 <ul>
 <li>CloudFront <a href="https://stackoverflow.com/questions/55195852/aws-cloudfront-for-internal-elastic-load-balancer-origin">does not work with Internal Load Balancers as Origins</a>.</li>
-<li>CloudFront <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/LocationsOfEdgeServers.html">has a dinamic list of IP&rsquo;s, which change randomly</a>. So static security group is not an option.</li>
-<li>Network Load Balancer (which is preferred way of setuping Ambassador) <a href="https://aws.amazon.com/premiumsupport/knowledge-center/security-group-load-balancer/">does not support Security Group attachment directly</a>.</li>
-<li>EKS cluster is composed from Autoscaling Node Pool&rsquo;s which may change dynamicaly.</li>
+<li>CloudFront <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/LocationsOfEdgeServers.html">has a dynamic list of IP&rsquo;s, which change randomly</a>. So static security group is not an option.</li>
+<li>Network Load Balancer (which is the preferred way to set up Ambassador) <a href="https://aws.amazon.com/premiumsupport/knowledge-center/security-group-load-balancer/">does not support Security Group attachment directly</a>.</li>
+<li>EKS cluster is composed of Autoscaling Node Pool&rsquo;s which may change dynamically.</li>
 </ul>
 <p>Given that, we must:</p>
 <ul>
-<li>Use Internet facing Network Load Balancer and setup Security Group on backends.</li>
+<li>Use Internet-facing Network Load Balancer and set up Security Group on backends.</li>
 <li>Bind Ambassador to static Host Ports.</li>
 <li>Setup mechanism for keeping Security Group up to date with CloudFront IP&rsquo;s.</li>
 <li>Setup mechanism for keeping Security Group attached to all EKS Node Pool instances.</li>
 </ul>
 <p>Luckily, AWS exposes IP address changes via SNS topic, so we can bind a lambda
-to update Security Group with changed IP&rsquo;s. Also, we can publish Autoscaling
+to update the Security Group with changed IP&rsquo;s. Also, we can publish Autoscaling
 Group changes to our topic. So, we need a few lambdas and all should fall into place:</p>
 
 
@@ -148,8 +148,8 @@ Group changes to our topic. So, we need a few lambdas and all should fall into p
 
 <p><a href="https://github.com/xytis/proper-ambassador-behind-cloudfront/tree/lambdas">Here</a>
 you can find terraform files and lambda sources. Check <code>locals.tf</code> file for more details.</p>
-<p>End result is an automaticaly applied dynamic security groups which allow only
-trafic from CloudFront to end up in your nodes.</p>
+<p>The end result is an automatically applied dynamic security groups that allow only
+traffic from CloudFront to end up in your nodes.</p>
 
 
 <div class="img-container">
