@@ -73,7 +73,7 @@ than others and one noticeably plum.
 She turned back.
 
 Wataru knelt on one knee, his hammers handle was lodged in his upper torso. His
-eyes were closed.  Shinigami was in the grasp of a cloaked creature, her arms
+eyes were closed. Shinigami was in the grasp of a cloaked creature, her arms
 flailed helplessly as another figure pressed a long needle into her neck.
 
 Nai was not able to think.
@@ -269,7 +269,7 @@ Group murmured in agreement and finished their food too.
 ...
 
 "Well, I am surprised to see you here.", Lan put down a bunch of papers as the
-group entered.  "Do you even imagine what kind of mess you have made yesterday?"
+group entered. "Do you even imagine what kind of mess you have made yesterday?"
 
 "Mess? What are you talking about? We completed your assignment.", Nai was
 confused and angry at the same time.
