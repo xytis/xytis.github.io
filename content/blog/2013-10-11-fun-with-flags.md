@@ -4,7 +4,7 @@ title: "Fun with flags"
 author: xytis
 date: 2013-10-11T12:00:00+02:00
 comments: true
-published: true
+published: 2013-10-11T12:00:00+02:00
 categories: [cpp, cpp11, templates]
 ---
 

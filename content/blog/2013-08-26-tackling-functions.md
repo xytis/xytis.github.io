@@ -3,7 +3,7 @@ layout: post
 title: "Tackling Functions"
 date: 2013-08-26T21:53:00+02:00
 comments: true
-published: true
+published: 2013-08-26T21:53:00+02:00
 author: xytis
 categories: [cpp, cpp11, templates]
 ---
@@ -89,7 +89,7 @@ Now the final specialization (again, note the templates in specialization) actua
 ``` cpp
 static const bool value = std::is_convertible<decltype(check<T>(nullptr)), Result>::value;
 ```
-First, a quick detour to wikipedia for meaning of [SFINAE](http://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error): If compiler encounters a substitution error while resolving a template instantiation, it does not stop with an error and continues to search for a valid candidate. In this case it means that in case of error in first instantiation of `check` function, compiler will choose second overload. Also note the `...` in the second template definition. As wiki says: 
+First, a quick detour to wikipedia for meaning of [SFINAE](http://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error): If compiler encounters a substitution error while resolving a template instantiation, it does not stop with an error and continues to search for a valid candidate. In this case it means that in case of error in first instantiation of `check` function, compiler will choose second overload. Also note the `...` in the second template definition. As wiki says:
     An ellipsis is used not only because it will accept any argument, but also because its conversion rank is lowest, so a call to the first function will be preferred if it is possible; this removes ambiguity.
 So it simply reassures that compiler will apply any tricks, implicit conversions, or things I have no idea about in order to match the first definition.
 The checking is done in two parts -- one that checks if given object is a functor of some sorts, and another, which checks if return type is valid and can be treated as `Result`.
@@ -148,7 +148,7 @@ Body of the constructor brings us to another topic: How function object is saved
 ``` cpp
   detail::manager_storage_type manager_storage;
   Result (*call)(const detail::functor_padding &, Arguments...);
-  
+
   template<typename T, typename Allocator>
   void initialize(T functor, Allocator && allocator)
   {
@@ -156,13 +156,13 @@ Body of the constructor brings us to another topic: How function object is saved
     detail::create_manager<T, Allocator>(manager_storage, FUNC_FORWARD(Allocator, allocator));
     detail::function_manager_inplace_specialization<T, Allocator>::store_functor(manager_storage, FUNC_FORWARD(T, functor));
   }
-  
+
   typedef Result(*Empty_Function_Type)(Arguments...);
   void initialize_empty() FUNC_NOEXCEPT
   {
     typedef std::allocator<Empty_Function_Type> Allocator;
     static_assert(detail::is_inplace_allocated<Empty_Function_Type, Allocator>::value, "The empty function should benefit from small functor optimization");
-    
+
     detail::create_manager<Empty_Function_Type, Allocator>(manager_storage, Allocator());
     detail::function_manager_inplace_specialization<Empty_Function_Type, Allocator>::store_functor(manager_storage, nullptr);
     #               ifdef FUNC_NO_EXCEPTIONS
