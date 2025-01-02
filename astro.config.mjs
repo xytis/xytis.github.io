@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.nolife4life.org',
+	site: 'https://xyt.is',
 	integrations: [mdx(), sitemap()],
 });
